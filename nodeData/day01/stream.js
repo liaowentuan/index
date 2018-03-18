@@ -24,9 +24,10 @@ readerStream.on('error', function(err){
 console.log("程序执行完毕");*/
 
 // 创建可读流
-var readerStream = fs.createReadStream('8.1Kmeans算法.mp4');
+var readerStream = fs.createReadStream('Buffer.js');
 
 // 设置编码为 utf8。
+readerStream.setEncoding('UTF8');
 // readerStream.setEncoding('MPEG4');
 
 readerStream.on('data', function(chunk) {

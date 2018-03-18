@@ -2,18 +2,13 @@
   <div class="login">
     <nav>
         <ul>
-          <li class="logo"><img src="" alt="没有logo"></li>
-          <li><router-link to="/home/realTime"><i class="el-icon-view"></i><br><span>实时预览</span></router-link></li>
-          <li><router-link to="/home/traffic"><i class="el-icon-sort"></i><br><span>通行统计</span></router-link></li>
-          <li><router-link to="/home/statistics"><i class="el-icon-date"></i><br><span>统计数据</span></router-link></li>
-          <li><router-link to="/home/personnel"><i class="el-icon-printer"></i><br><span>人员管理</span></router-link></li>
-          <li><router-link to="/home/auditing"><i class="el-icon-edit-outline"></i><br><span>审核管理</span></router-link></li>
-          <li><router-link to="/home/release"><i class="el-icon-edit"></i><br><span>放行管理</span></router-link></li>
-          <li><router-link to="/home/sysModule"><i class="el-icon-setting"></i><br><span>系统管理</span></router-link></li>
+          <li><button>△</button></li>
+          <li><router-link to="/home/vueCliLearning"><i class="el-icon-view"></i><br><span>vueCli</span></router-link></li>
+          <li><router-link to="/home/pythonLearning"><i class="el-icon-view"></i><br><span>python</span></router-link></li>
         </ul>
     </nav>
     <main>
-      <el-row class="title">
+      <!--<el-row class="title">
         <el-col :span="4" :offset="20">
           <el-row>
             <el-col :span="8"><el-button icon="el-icon-circle-check-outline"></el-button></el-col>
@@ -21,7 +16,7 @@
             <el-col :span="8"><el-button icon="el-icon-edit-outline"></el-button></el-col>
           </el-row>
         </el-col>
-      </el-row>
+      </el-row>-->
       <router-view/>
     </main>
   </div>

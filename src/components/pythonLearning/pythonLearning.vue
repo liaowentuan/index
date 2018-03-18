@@ -1,20 +1,17 @@
 <template>
-<div>
-  {{msg}}
-</div>
+  <div>{{ msg }}</div>
 </template>
 
 <script>
 export default {
-  name: 'traffic',
+  name: 'pythonlearning',
   data () {
     return {
-      msg: 'this is traffic'
+      msg: 'pythonLearning'
     }
   }
 }
 </script>
 
 <style scoped>
-
 </style>

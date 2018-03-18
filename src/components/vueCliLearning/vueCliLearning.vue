@@ -4,10 +4,10 @@
 
 <script>
 export default {
-  name: 'personnel',
+  name: 'vue-cli-learning',
   data () {
     return {
-      msg: 'this is personnel'
+      msg: 'vueCliLearning'
     }
   }
 }
