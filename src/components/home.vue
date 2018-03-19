@@ -2,7 +2,7 @@
   <div class="login">
     <nav>
         <ul>
-          <li><button>△</button></li>
+          <li><button><span class="up">△</span></button></li>
           <li><router-link to="/home/vueCliLearning"><i class="el-icon-view"></i><br><span>vueCli</span></router-link></li>
           <li><router-link to="/home/pythonLearning"><i class="el-icon-view"></i><br><span>python</span></router-link></li>
         </ul>

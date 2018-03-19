@@ -25,12 +25,24 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
 nav{
   position: fixed;
   height: 100%;
   width: 150px;
-  background: red;
+  background: #2a50b1;
+  .router-link-active{
+    background: #424A60;
+    width: 100%;
+    color:white;
+   }
+  a{
+      text-decoration: none;
+      color:#fff;
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+    }
 }
 main{
   margin-left: 150px;
