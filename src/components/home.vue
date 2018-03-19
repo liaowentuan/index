@@ -40,7 +40,7 @@ export default {
   nav{
     position: fixed;
     height: 100%;
-    width: 200px;
+    width: 100px;
     box-sizing: border-box;
     background: #616C88;
     .router-link-active{
@@ -63,7 +63,7 @@ export default {
     }
   }
   main{
-    margin-left:200px;
+    margin-left:100px;
   }
   .title{
     padding: 15px 0;
