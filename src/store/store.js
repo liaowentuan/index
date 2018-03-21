@@ -5,8 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    count: 0,
-    playerStatus: 1
+    count: 0
   },
   mutations
 })

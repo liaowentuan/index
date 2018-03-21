@@ -8,6 +8,8 @@ import axios from 'axios'
 import App from './App'
 import store from './store/store'
 import echarts from 'echarts'
+import 'font-awesome/css/font-awesome.min.css'
+
 // 添加请求拦截器
 axios.interceptors.request.use(function (config) {
   // 在发送请求之前做些什么
@@ -29,12 +31,9 @@ Vue.prototype.echarts = echarts
 Vue.prototype.$http = axios
 Vue.use(ElementUI)
 
-/* new Vue({
-  el: '#app',
-  render: h => h(App)
-}) */
-
 Vue.config.productionTip = false
+
+Vue.prototype.Base64 = require('js-base64').Base64
 
 /* eslint-disable no-new */
 new Vue({

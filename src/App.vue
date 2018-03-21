@@ -9,16 +9,19 @@ export default {
   name: 'App'
 }
 </script>
+
 <style>
-  body{
-    margin:0;
-  }
-  ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .table-page{
-    margin: 10px;
-  }
+body,ul{
+  margin: 0;
+  padding: 0;
+}
+html{
+  background: #F5F5FA;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
 </style>

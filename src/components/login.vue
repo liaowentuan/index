@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     login () {
-      /* this.$http({
+      this.$http({
         method: 'POST',
         url: '/controller/login/user/admin',
         // url: '/controller/hello',
@@ -40,10 +40,7 @@ export default {
         }
       }).catch(function (res) {
         console.log(res)
-      }) */
-      if (this.user === 'admin' && this.upwd === 'admin') {
-        window.location.href = '#/home'
-      }
+      })
     }
   }
 }
