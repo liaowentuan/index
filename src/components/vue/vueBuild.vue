@@ -4,10 +4,10 @@
 
 <script>
 export default {
-  name: 'storager',
+  name: 'vue-build',
   data () {
     return {
-      msg: 'this is storager'
+      msg: 'this is vue-build'
     }
   }
 }

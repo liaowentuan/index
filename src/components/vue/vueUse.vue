@@ -4,10 +4,10 @@
 
 <script>
 export default {
-  name: 'equipment',
+  name: 'vue-use',
   data () {
     return {
-      msg: 'this is equipment'
+      msg: 'this is vue-use'
     }
   }
 }

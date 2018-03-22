@@ -4,10 +4,10 @@
 
 <script>
 export default {
-  name: 'user',
+  name: 'git',
   data () {
     return {
-      msg: 'this is user'
+      msg: 'this is git'
     }
   }
 }

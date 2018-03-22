@@ -4,10 +4,10 @@
 
 <script>
 export default {
-  name: 'real-time',
+  name: 'vue-init',
   data () {
     return {
-      msg: 'this is realTime'
+      msg: 'this is vue-init'
     }
   }
 }

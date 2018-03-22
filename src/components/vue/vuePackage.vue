@@ -4,10 +4,10 @@
 
 <script>
 export default {
-  name: 'visitor',
+  name: 'vue-package',
   data () {
     return {
-      msg: 'this is 到访统计'
+      msg: 'this is vue-package'
     }
   }
 }

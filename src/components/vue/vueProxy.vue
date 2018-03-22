@@ -4,10 +4,10 @@
 
 <script>
 export default {
-  name: 'parameter',
+  name: 'vue-proxy',
   data () {
     return {
-      msg: 'this is parameter'
+      msg: 'this is vue-proxy'
     }
   }
 }

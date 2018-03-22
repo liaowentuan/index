@@ -4,10 +4,10 @@
 
 <script>
 export default {
-  name: 'detail',
+  name: 'python',
   data () {
     return {
-      msg: 'this is 进出明细'
+      msg: 'this is python'
     }
   }
 }

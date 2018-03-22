@@ -4,10 +4,10 @@
 
 <script>
 export default {
-  name: 'abnormity',
+  name: 'nginx',
   data () {
     return {
-      msg: 'this is 异常明细'
+      msg: 'this is nginx'
     }
   }
 }
