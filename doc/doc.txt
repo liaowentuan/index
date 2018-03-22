@@ -1,5 +1,5 @@
 // 跨域配置
-config   =>   index.js   =>   line 12 左右
+config   =>   index.js  => line 12 左右
 module.exports = {
   dev: {
     // Paths
