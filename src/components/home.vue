@@ -55,6 +55,7 @@
       </ul>
     </nav>
     <main>
+      <div class="table"></div>
       <router-view/>
     </main>
   </div>
@@ -83,6 +84,12 @@ aside{
   top: 0;
   background: #fff;
   z-index: 10;
+}
+.table{
+  display: table;
+  +div{
+    min-height: 670px;
+  }
 }
 .shadow{
   top: 0;

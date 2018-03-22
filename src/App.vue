@@ -24,4 +24,9 @@ ul{
 a{
   text-decoration: none;
 }
+.page{
+  background: #fff;
+  margin-top: 10px;
+  margin-left: 10px;
+}
 </style>
