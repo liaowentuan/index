@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import login from '@/components/login'
+// import login from '@/components/login'
 import home from '@/components/home'
 
 import vueDocs from '@/components/vue/vueDocs'
@@ -19,11 +19,11 @@ import nginx from '@/components/nginx/nginx'
 Vue.use(Router)
 
 let routes = [
-  {
+  /* {
     path: '/login',
     name: 'login',
     component: login
-  },
+  }, */
   {
     path: '/home',
     name: 'home',
@@ -80,7 +80,7 @@ const router = new Router({
 
 router.beforeEach((to, from, next) => {
   if (to.matched.length === 0) {
-    from.name ? next({ name: from.name }) : next('/login')
+    from.name ? next({ name: from.name }) : next('/home')
   } else {
     next()
   }
