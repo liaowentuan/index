@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 body,ul{
   margin: 0;
   padding: 0;
@@ -28,5 +28,10 @@ a{
   background: #fff;
   margin-top: 10px;
   margin-left: 10px;
+  padding: 10px 0 0 10px;
+  pre,p{
+    font-family: '宋体';
+    font-size: 17px;
+  }
 }
 </style>

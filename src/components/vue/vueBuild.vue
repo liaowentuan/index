@@ -1,5 +1,20 @@
 <template>
-    <div>{{msg}}</div>
+    <div class="page">
+      <h3>发布项目</h3>
+      <pre>
+        修改发布路径
+        ﹂config
+            ﹂index.js
+            build: {
+                // Template for index.html
+                index: path.resolve(__dirname, '../../facegateCompiled/index.html'), # 原始的 ../dist
+                // Paths
+                assetsRoot: path.resolve(__dirname, '../../facegateCompiled'),       # 原始的 ../dist
+                assetsSubDirectory: 'static',
+                assetsPublicPath: '/',
+        npm run build
+      </pre>
+    </div>
 </template>
 
 <script>
