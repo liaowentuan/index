@@ -17,6 +17,7 @@ import postgresql from '@/components/python/postgresql'
 
 import nginx from '@/components/nginx/nginx'
 import wechatHttp from '@/components/nginx/wechat_http'
+import wechatHttps from '@/components/nginx/wechat_https'
 
 Vue.use(Router)
 
@@ -77,11 +78,15 @@ let routes = [
       {
         path: '/home/nginx',
         component: nginx,
-        redirect: '/home/nginx/wechat_http',
+        redirect: '/home/nginx/http',
         children: [
           {
             component: wechatHttp,
-            path: '/home/nginx/wechat_http'
+            path: '/home/nginx/http'
+          },
+          {
+            component: wechatHttps,
+            path: '/home/nginx/wechat_https'
           }
         ]
       }

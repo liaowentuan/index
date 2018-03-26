@@ -38,7 +38,8 @@
           </router-link>
           <div>
             <ul>
-              <!--<li class="branch"><router-link to="/home/auditing/waiting"><span>待我审核</span></router-link></li>-->
+              <li class="branch"><router-link to="/home/nginx/http"><span>http</span></router-link></li>
+              <li class="branch"><router-link to="/home/nginx/wechat_https"><span>wechat_https</span></router-link></li>
             </ul>
           </div>
         </li>

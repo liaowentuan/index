@@ -6,10 +6,10 @@
 
 <script>
 export default {
-  name: 'wechat_http',
+  name: 'wechat_https',
   data () {
     return {
-      msg: 'http'
+      msg: 'wechat_https'
     }
   }
 }
