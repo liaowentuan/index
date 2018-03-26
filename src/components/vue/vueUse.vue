@@ -50,40 +50,40 @@
           <h3>使用echart</h3>
           <pre>
             ﹂src
-            ﹂main.js
-            import echarts from 'echarts'
-            Vue.prototype.echarts = echarts
+              ﹂main.js
+              import echarts from 'echarts'
+              Vue.prototype.echarts = echarts
 
-            new Vue({
-                el: '#app',
-                router,
-                store,
-                echarts,
-                components: { App },
-                template: '&lt;App/&gt;'
-            })
+              new Vue({
+                  el: '#app',
+                  router,
+                  store,
+                  echarts,
+                  components: { App },
+                  template: '&lt;App/&gt;'
+              })
           </pre>
         </li>
         <li>
           <h4>使用vuex</h4>
           <pre>
             ﹂src
-            ﹂store # 创建文件夹
-                ﹂store.js # 创建该文件
-                import Vue from 'vue'
-                import Vuex from 'vuex'
-                import mutations from './mutations'  #引入文件
-                Vue.use(Vuex)
+              ﹂store # 创建文件夹
+                  ﹂store.js # 创建该文件
+                  import Vue from 'vue'
+                  import Vuex from 'vuex'
+                  import mutations from './mutations'  #引入文件
+                  Vue.use(Vuex)
 
-                export default new Vuex.Store({
-                  state: {
-                    count: 0
-                  },
-                  mutations
+                  export default new Vuex.Store({
+                    state: {
+                      count: 0
+                    },
+                    mutations
                 })
             ﹂src
-            ﹂store # 创建文件夹
-            ﹂mutations.js # 创建该文件
+              ﹂store # 创建文件夹
+                ﹂mutations.js # 创建该文件
 
                 const mutations = {
                     addition: state => state.count++,

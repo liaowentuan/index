@@ -1,7 +1,5 @@
-<template>
-    <div class="page">
-        <h3>使用psycopg2包 另外还要install psycopg2-binary</h3>
-        <pre>
+import os
+import sys
 import psycopg2
 
 def connectPostgreSQL():
@@ -31,21 +29,3 @@ def connectPostgreSQL():
 
 if __name__=='__main__':
    connectPostgreSQL()
-        </pre>
-    </div>
-</template>
-
-<script>
-export default {
-  name: 'postgresql',
-  data () {
-    return {
-      msg: 'postgresql'
-    }
-  }
-}
-</script>
-
-<style scoped>
-
-</style>
