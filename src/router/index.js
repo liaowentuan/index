@@ -16,7 +16,7 @@ import python from '@/components/python/python'
 import postgresql from '@/components/python/postgresql'
 
 import nginx from '@/components/nginx/nginx'
-import  wechatHttp from '@/components/nginx/wechat_http'
+import wechatHttp from '@/components/nginx/wechat_http'
 
 Vue.use(Router)
 
