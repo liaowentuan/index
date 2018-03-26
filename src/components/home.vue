@@ -48,7 +48,7 @@
           </router-link>
           <div>
             <ul>
-             <!-- <li class="branch"><router-link to="/home/sysModule/user"><span>用户管理</span></router-link></li>-->
+              <li class="branch"><router-link to="/home/python/postgresql"><span>postgresql</span></router-link></li>
             </ul>
           </div>
         </li>
