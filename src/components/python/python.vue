@@ -1,15 +1,12 @@
 <template>
-    <div>{{msg}}</div>
+    <div class="python">
+      <router-view/>
+    </div>
 </template>
 
 <script>
 export default {
-  name: 'python',
-  data () {
-    return {
-      msg: 'this is python'
-    }
-  }
+  name: 'python'
 }
 </script>
 

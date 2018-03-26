@@ -13,6 +13,7 @@ import vueBuild from '@/components/vue/vueBuild'
 import git from '@/components/git/git'
 
 import python from '@/components/python/python'
+import postgresql from '@/components/python/postgresql'
 
 import nginx from '@/components/nginx/nginx'
 
@@ -63,7 +64,14 @@ let routes = [
       },
       {
         path: '/home/python',
-        component: python
+        component: python,
+        redirect: '/home/python/postgresql',
+        children: [
+          {
+            component: postgresql,
+            path: '/home/python/postgresql'
+          }
+        ]
       },
       {
         path: '/home/nginx',

@@ -87,9 +87,6 @@ aside{
 }
 .table{
   display: table;
-  +div{
-    min-height: 670px;
-  }
 }
 .shadow{
   top: 0;
