@@ -68,7 +68,15 @@ export default {
   name: 'home',
   data () {
     return {
-      treeOne: false
+      treeOne: true,
+      treeTwo: false,
+      treethree: false,
+      treefour: false
+    }
+  },
+  methods: {
+    navEvent (index) {
+      console.log(index)
     }
   }
 }
