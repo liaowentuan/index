@@ -51,7 +51,6 @@ def download(filename):
     conn.commit()
     conn.close()
 
-
 if __name__ == "__main__":
     download('qt=tile&x=0&y=-2&z=4&styles=pl&scaler=1&udt=20180131.png')
         </pre>
