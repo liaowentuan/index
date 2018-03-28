@@ -15,6 +15,7 @@ import reset from '@/components/git/reset'
 
 import python from '@/components/python/python'
 import postgresql from '@/components/python/postgresql'
+import postgresqlCore from '@/components/python/postgresqlCore'
 
 import nginx from '@/components/nginx/nginx'
 import wechatHttp from '@/components/nginx/wechat_http'
@@ -80,6 +81,10 @@ let routes = [
           {
             component: postgresql,
             path: '/home/python/postgresql'
+          },
+          {
+            component: postgresqlCore,
+            path: '/home/python/postgresqlCore'
           }
         ]
       },

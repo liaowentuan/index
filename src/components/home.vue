@@ -50,6 +50,7 @@
           <div>
             <ul>
               <li class="branch"><router-link to="/home/python/postgresql"><span>postgresql</span></router-link></li>
+              <li class="branch"><router-link to="/home/python/postgresqlCore"><span>postgresqlCore</span></router-link></li>
             </ul>
           </div>
         </li>
