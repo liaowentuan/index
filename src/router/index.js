@@ -13,8 +13,11 @@ import vueBuild from '@/components/vue/vueBuild'
 import git from '@/components/git/git'
 
 import python from '@/components/python/python'
+import postgresql from '@/components/python/postgresql'
 
 import nginx from '@/components/nginx/nginx'
+import wechatHttp from '@/components/nginx/wechat_http'
+import wechatHttps from '@/components/nginx/wechat_https'
 
 Vue.use(Router)
 
@@ -63,11 +66,29 @@ let routes = [
       },
       {
         path: '/home/python',
-        component: python
+        component: python,
+        redirect: '/home/python/postgresql',
+        children: [
+          {
+            component: postgresql,
+            path: '/home/python/postgresql'
+          }
+        ]
       },
       {
         path: '/home/nginx',
-        component: nginx
+        component: nginx,
+        redirect: '/home/nginx/http',
+        children: [
+          {
+            component: wechatHttp,
+            path: '/home/nginx/http'
+          },
+          {
+            component: wechatHttps,
+            path: '/home/nginx/wechat_https'
+          }
+        ]
       }
     ]
   }

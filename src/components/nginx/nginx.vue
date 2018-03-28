@@ -1,15 +1,12 @@
 <template>
-    <div>{{msg}}</div>
+    <div class="ngnix">
+      <router-view/>
+    </div>
 </template>
 
 <script>
 export default {
-  name: 'nginx',
-  data () {
-    return {
-      msg: 'this is nginx'
-    }
-  }
+  name: 'nginx'
 }
 </script>
 

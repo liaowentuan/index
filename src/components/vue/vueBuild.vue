@@ -3,6 +3,7 @@
       <h3>发布项目</h3>
       <pre>
         修改发布路径
+
         ﹂config
             ﹂index.js
             build: {

@@ -38,7 +38,8 @@
           </router-link>
           <div>
             <ul>
-              <!--<li class="branch"><router-link to="/home/auditing/waiting"><span>待我审核</span></router-link></li>-->
+              <li class="branch"><router-link to="/home/nginx/http"><span>http</span></router-link></li>
+              <li class="branch"><router-link to="/home/nginx/wechat_https"><span>wechat_https</span></router-link></li>
             </ul>
           </div>
         </li>
@@ -48,7 +49,7 @@
           </router-link>
           <div>
             <ul>
-             <!-- <li class="branch"><router-link to="/home/sysModule/user"><span>用户管理</span></router-link></li>-->
+              <li class="branch"><router-link to="/home/python/postgresql"><span>postgresql</span></router-link></li>
             </ul>
           </div>
         </li>
@@ -87,9 +88,6 @@ aside{
 }
 .table{
   display: table;
-  +div{
-    min-height: 670px;
-  }
 }
 .shadow{
   top: 0;
