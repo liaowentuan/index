@@ -1,15 +1,12 @@
 <template>
-    <div>{{msg}}</div>
+    <div class="git">
+        <router-view/>
+    </div>
 </template>
 
 <script>
 export default {
-  name: 'git',
-  data () {
-    return {
-      msg: 'this is git'
-    }
-  }
+  name: 'git'
 }
 </script>
 

@@ -1,5 +1,11 @@
 <template>
     <div class="page">
+        <h3>使用前准备</h3>
+        <pre>
+  为了让psycopg2兼容python3 下载二进制的psycopg2包
+  pip install -U pip
+  pip install psycopg2
+        </pre>
         <h3>使用psycopg2包 另外还要install psycopg2-binary</h3>
         <pre>
 import psycopg2

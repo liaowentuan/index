@@ -11,6 +11,7 @@ import vueProxy from '@/components/vue/vueProxy'
 import vueBuild from '@/components/vue/vueBuild'
 
 import git from '@/components/git/git'
+import reset from '@/components/git/reset'
 
 import python from '@/components/python/python'
 import postgresql from '@/components/python/postgresql'
@@ -62,7 +63,14 @@ let routes = [
       },
       {
         path: '/home/git',
-        component: git
+        component: git,
+        redirect: '/home/git/reset',
+        children: [
+          {
+            component: reset,
+            path: '/home/git/reset'
+          }
+        ]
       },
       {
         path: '/home/python',
