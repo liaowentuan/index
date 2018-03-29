@@ -9,10 +9,8 @@
     <nav>
       <ul>
         <li class="treeLi">
-          <router-link to="/home/vue">
-            <i class="fa fa-viacoin"></i><span>vue-cli开发</span>
-          </router-link>
-          <div>
+          <router-link to="/home/vue"><b @click="print(0)"><i class="fa fa-viacoin"></i><span>vue-cli开发</span></b></router-link>
+          <div v-show="navBar[0]">
             <ul>
               <li class="branch"><router-link to="/home/vue/init"><span>init</span></router-link></li>
               <li class="branch"><router-link to="/home/vue/package"><span>npm包</span></router-link></li>
@@ -24,9 +22,9 @@
         </li>
         <li class="treeLi">
           <router-link to="/home/git">
-            <i class="fa fa-git"></i><span>git命令</span>
+            <b @click="print(1)"><i class="fa fa-git"></i><span>git命令</span></b>
           </router-link>
-          <div>
+          <div v-show="navBar[1]">
             <ul>
               <li class="branch"><router-link to="/home/git/reset"><span>reset 版本回退</span></router-link></li>
             </ul>
@@ -34,9 +32,9 @@
         </li>
         <li class="treeLi">
           <router-link to="/home/nginx">
-            <i class="fa fa-chrome"></i><span>Nginx</span>
+            <b @click="print(2)"><i class="fa fa-chrome"></i><span>Nginx</span></b>
           </router-link>
-          <div>
+          <div v-show="navBar[2]">
             <ul>
               <li class="branch"><router-link to="/home/nginx/http"><span>http</span></router-link></li>
               <li class="branch"><router-link to="/home/nginx/wechat_https"><span>wechat_https</span></router-link></li>
@@ -45,9 +43,9 @@
         </li>
         <li class="treeLi">
           <router-link to="/home/python">
-            <i class="fa fa-product-hunt"></i><span>python</span>
+            <b @click="print(3)"><i class="fa fa-product-hunt"></i><span>python</span></b>
           </router-link>
-          <div>
+          <div v-show="navBar[3]">
             <ul>
               <li class="branch"><router-link to="/home/python/postgresql"><span>postgresql</span></router-link></li>
               <li class="branch"><router-link to="/home/python/postgresqlCore"><span>postgresqlCore</span></router-link></li>
@@ -68,15 +66,15 @@ export default {
   name: 'home',
   data () {
     return {
-      treeOne: true,
-      treeTwo: false,
-      treethree: false,
-      treefour: false
+      navBar: [true, false, false, false]
     }
   },
   methods: {
-    navEvent (index) {
-      console.log(index)
+    print (index) {
+      if (index === 1) {
+        this.navBar[0] = true
+      }
+      console.log('index')
     }
   }
 }
@@ -155,6 +153,12 @@ nav{
       div{
         display: none;
         margin-top: 0;
+      }
+      b{
+        display: block;
+        width: 100%;
+        margin-left: -45px;
+        padding-left: 45px;
       }
       .router-link-active + div{
         display: block;
