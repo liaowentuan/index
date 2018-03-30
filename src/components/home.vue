@@ -72,35 +72,14 @@ export default {
   },
   methods: {
     print (index) {
-      if (index === 0) {
-        if (this.navBar[0] === false) {
-          this.navBar = [true, false, false, false]
-        } else {
-          this.navBar = [false, false, false, false]
-        }
+      let arr1 = [false, false, false, false]
+      arr1[index] = true
+      let arr2 = [false, false, false, false]
+      if (this.navBar[index] === true) {
+        this.navBar = arr2
+      } else {
+        this.navBar = arr1
       }
-      if (index === 1) {
-        if (this.navBar[1] === false) {
-          this.navBar = [false, true, false, false]
-        } else {
-          this.navBar = [false, false, false, false]
-        }
-      }
-      if (index === 2) {
-        if (this.navBar[2] === false) {
-          this.navBar = [false, false, true, false]
-        } else {
-          this.navBar = [false, false, false, false]
-        }
-      }
-      if (index === 3) {
-        if (this.navBar[3] === false) {
-          this.navBar = [false, false, false, true]
-        } else {
-          this.navBar = [false, false, false, false]
-        }
-      }
-      console.log(this.navBar)
     }
   }
 }
