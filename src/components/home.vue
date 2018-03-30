@@ -10,7 +10,7 @@
       <ul>
         <li class="treeLi">
           <router-link to="/home/vue"><b @click="print(0)"><i class="fa fa-viacoin"></i><span>vue-cli开发</span></b></router-link>
-          <div v-show="navBar[0]">
+          <div v-if="navBar[0]">
             <ul>
               <li class="branch"><router-link to="/home/vue/init"><span>init</span></router-link></li>
               <li class="branch"><router-link to="/home/vue/package"><span>npm包</span></router-link></li>
@@ -25,7 +25,7 @@
           <router-link to="/home/git">
             <b @click="print(1)"><i class="fa fa-git"></i><span>git命令</span></b>
           </router-link>
-          <div v-show="navBar[1]">
+          <div v-if="navBar[1]">
             <ul>
               <li class="branch"><router-link to="/home/git/reset"><span>reset 版本回退</span></router-link></li>
             </ul>
@@ -35,7 +35,7 @@
           <router-link to="/home/nginx">
             <b @click="print(2)"><i class="fa fa-chrome"></i><span>Nginx</span></b>
           </router-link>
-          <div v-show="navBar[2]">
+          <div v-if="navBar[2]">
             <ul>
               <li class="branch"><router-link to="/home/nginx/http"><span>http</span></router-link></li>
               <li class="branch"><router-link to="/home/nginx/wechat_https"><span>wechat_https</span></router-link></li>
@@ -46,7 +46,7 @@
           <router-link to="/home/python">
             <b @click="print(3)"><i class="fa fa-product-hunt"></i><span>python</span></b>
           </router-link>
-          <div v-show="navBar[3]">
+          <div v-if="navBar[3]">
             <ul>
               <li class="branch"><router-link to="/home/python/postgresql"><span>postgresql</span></router-link></li>
               <li class="branch"><router-link to="/home/python/postgresqlCore"><span>postgresqlCore</span></router-link></li>
@@ -72,23 +72,35 @@ export default {
   },
   methods: {
     print (index) {
-      this.navBar = [false, false, false, false]
       if (index === 0) {
-        this.navBar[0] = true
-        console.log(this.navBar)
+        if (this.navBar[0] === false) {
+          this.navBar = [true, false, false, false]
+        } else {
+          this.navBar = [false, false, false, false]
+        }
       }
       if (index === 1) {
-        this.navBar[1] = true
-        console.log(this.navBar)
+        if (this.navBar[1] === false) {
+          this.navBar = [false, true, false, false]
+        } else {
+          this.navBar = [false, false, false, false]
+        }
       }
       if (index === 2) {
-        this.navBar[2] = true
-        console.log(this.navBar)
+        if (this.navBar[2] === false) {
+          this.navBar = [false, false, true, false]
+        } else {
+          this.navBar = [false, false, false, false]
+        }
       }
       if (index === 3) {
-        this.navBar[3] = true
-        console.log(this.navBar)
+        if (this.navBar[3] === false) {
+          this.navBar = [false, false, false, true]
+        } else {
+          this.navBar = [false, false, false, false]
+        }
       }
+      console.log(this.navBar)
     }
   }
 }
