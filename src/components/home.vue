@@ -17,6 +17,7 @@
               <li class="branch"><router-link to="/home/vue/use"><span>配置包</span></router-link></li>
               <li class="branch"><router-link to="/home/vue/proxy"><span>代理</span></router-link></li>
               <li class="branch"><router-link to="/home/vue/build"><span>发布</span></router-link></li>
+              <li class="branch"><router-link to="/home/vue/layout"><span>懒加载</span></router-link></li>
             </ul>
           </div>
         </li>
@@ -71,10 +72,23 @@ export default {
   },
   methods: {
     print (index) {
-      if (index === 1) {
+      this.navBar = [false, false, false, false]
+      if (index === 0) {
         this.navBar[0] = true
+        console.log(this.navBar)
       }
-      console.log('index')
+      if (index === 1) {
+        this.navBar[1] = true
+        console.log(this.navBar)
+      }
+      if (index === 2) {
+        this.navBar[2] = true
+        console.log(this.navBar)
+      }
+      if (index === 3) {
+        this.navBar[3] = true
+        console.log(this.navBar)
+      }
     }
   }
 }
@@ -151,7 +165,6 @@ nav{
         }
       }
       div{
-        display: none;
         margin-top: 0;
       }
       b{
@@ -161,7 +174,6 @@ nav{
         padding-left: 45px;
       }
       .router-link-active + div{
-        display: block;
         animation: show .3s linear 0s;
         animation-fill-mode:forwards;
       }

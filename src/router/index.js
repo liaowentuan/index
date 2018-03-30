@@ -1,25 +1,26 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 // import login from '@/components/login'
-import home from '@/components/home'
+const home = () => import('@/components/home')
 
-import vueDocs from '@/components/vue/vueDocs'
-import vueInit from '@/components/vue/vueInit'
-import vuePackage from '@/components/vue/vuePackage'
-import vueUse from '@/components/vue/vueUse'
-import vueProxy from '@/components/vue/vueProxy'
-import vueBuild from '@/components/vue/vueBuild'
+const git = () => import('@/components/git/git')
+const reset = () => import('@/components/git/reset')
 
-import git from '@/components/git/git'
-import reset from '@/components/git/reset'
+const python = () => import('@/components/python/python')
+const postgresql = () => import('@/components/python/postgresql')
+const postgresqlCore = () => import('@/components/python/postgresqlCore')
 
-import python from '@/components/python/python'
-import postgresql from '@/components/python/postgresql'
-import postgresqlCore from '@/components/python/postgresqlCore'
+const nginx = () => import('@/components/nginx/nginx')
+const wechatHttp = () => import('@/components/nginx/wechat_http')
+const wechatHttps = () => import('@/components/nginx/wechat_https')
 
-import nginx from '@/components/nginx/nginx'
-import wechatHttp from '@/components/nginx/wechat_http'
-import wechatHttps from '@/components/nginx/wechat_https'
+const vueDocs = () => import('@/components/vue/vueDocs')
+const vueInit = () => import('@/components/vue/vueInit')
+const vuePackage = () => import('@/components/vue/vuePackage')
+const vueUse = () => import('@/components/vue/vueUse')
+const vueProxy = () => import('@/components/vue/vueProxy')
+const vueBuild = () => import('@/components/vue/vueBuild')
+const vueLayout = () => import('@/components/vue/vueLayout')
 
 Vue.use(Router)
 
@@ -59,6 +60,10 @@ let routes = [
           {
             path: '/home/vue/build',
             component: vueBuild
+          },
+          {
+            path: '/home/vue/layout',
+            component: vueLayout
           }
         ]
       },
