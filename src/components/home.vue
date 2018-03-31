@@ -7,7 +7,7 @@
 
     </div>
     <nav>
-      <ul>
+      <ul ref="navbar">
         <li class="treeLi">
           <router-link to="/home/vue"><b @click="print(0)"><i class="fa fa-viacoin"></i><span>vue-cli开发</span></b></router-link>
           <div v-if="navBar[0]">
@@ -67,7 +67,7 @@ export default {
   name: 'home',
   data () {
     return {
-      navBar: [true, false, false, false]
+      navBar: [false, false, false, false]
     }
   },
   methods: {
@@ -81,6 +81,11 @@ export default {
         this.navBar = arr1
       }
     }
+  },
+  mounted () {
+    this.$nextTick(function () {
+      console.log(this.$refs)
+    })
   }
 }
 </script>

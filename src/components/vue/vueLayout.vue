@@ -2,6 +2,11 @@
   <div class="page">
     <h3>懒加载</h3>
     <pre>
+      ﹂src
+        ﹂router
+          ﹂index.js
+      import vueDocs from '@/components/vue/vueDocs'
+      改为:
       const vueDocs = (resolve) => {
         import('@/components/vue/vueDocs').then((module) => {
           resolve(module)
