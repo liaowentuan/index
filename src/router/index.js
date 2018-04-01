@@ -22,6 +22,9 @@ const vueProxy = () => import('@/components/vue/vueProxy')
 const vueBuild = () => import('@/components/vue/vueBuild')
 const vueLayout = () => import('@/components/vue/vueLayout')
 
+const Django = () => import('@/components/Django/Django')
+const DjangoInstall = () => import('@/components/Django/DjangoInstall')
+
 Vue.use(Router)
 
 let routes = [
@@ -75,6 +78,17 @@ let routes = [
           {
             component: reset,
             path: '/home/git/reset'
+          }
+        ]
+      },
+      {
+        path: '/home/Django',
+        component: Django,
+        redirect: '/home/Django/install',
+        children: [
+          {
+            component: DjangoInstall,
+            path: '/home/Django/install'
           }
         ]
       },

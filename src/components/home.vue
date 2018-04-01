@@ -53,6 +53,17 @@
             </ul>
           </div>
         </li>
+        <li class="treeLi">
+          <router-link to="/home/Django">
+            <b @click="print(4)"><i class="fa fa-product-hunt"></i><span>Django</span></b>
+          </router-link>
+          <div v-if="navBar[4]">
+            <ul>
+              <li class="branch"><router-link to="/home/Django/install"><span>install</span></router-link></li>
+              <!--<li class="branch"><router-link to="/home/python/postgresqlCore"><span>postgresqlCore</span></router-link></li>-->
+            </ul>
+          </div>
+        </li>
       </ul>
     </nav>
     <main>
