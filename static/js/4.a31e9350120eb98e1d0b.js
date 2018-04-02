@@ -1,2 +1,0 @@
-webpackJsonp([4],{"AA+W":function(e,t){},XiU3:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a={render:function(){var e=this.$createElement,t=this._self._c||e;return t("div",{staticClass:"vue"},[t("router-view")],1)},staticRenderFns:[]};var r=n("VU/8")({name:"vue-docs"},a,!1,function(e){n("AA+W")},"data-v-72afaf10",null);t.default=r.exports}});
-//# sourceMappingURL=4.a31e9350120eb98e1d0b.js.map
