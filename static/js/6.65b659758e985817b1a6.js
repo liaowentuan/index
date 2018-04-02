@@ -1,0 +1,2 @@
+webpackJsonp([6],{"4son":function(t,e){},ZN7y:function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var s={render:function(){var t=this.$createElement;return(this._self._c||t)("div",{staticClass:"page"},[this._v("\n    "+this._s(this.msg)+"\n")])},staticRenderFns:[]};var a=n("Z0/y")({name:"wechat_http",data:function(){return{msg:"http"}}},s,!1,function(t){n("4son")},"data-v-5b322c72",null);e.default=a.exports}});
+//# sourceMappingURL=6.65b659758e985817b1a6.js.map
