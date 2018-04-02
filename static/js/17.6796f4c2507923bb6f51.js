@@ -1,0 +1,2 @@
+webpackJsonp([17],{"/eGv":function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var r={render:function(){var e=this.$createElement,n=this._self._c||e;return n("div",{staticClass:"ngnix"},[n("router-view")],1)},staticRenderFns:[]};var i=t("VU/8")({name:"nginx"},r,!1,function(e){t("5O9Z")},"data-v-046dc60b",null);n.default=i.exports},"5O9Z":function(e,n){}});
+//# sourceMappingURL=17.6796f4c2507923bb6f51.js.map

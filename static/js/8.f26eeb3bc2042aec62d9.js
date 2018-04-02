@@ -1,0 +1,2 @@
+webpackJsonp([8],{bt9g:function(t,e){},"hIy/":function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var s={render:function(){var t=this.$createElement;return(this._self._c||t)("div",{staticClass:"page"},[this._v("\n    "+this._s(this.msg)+"\n")])},staticRenderFns:[]};var a=n("VU/8")({name:"wechat_https",data:function(){return{msg:"wechat_https"}}},s,!1,function(t){n("bt9g")},"data-v-57582da5",null);e.default=a.exports}});
+//# sourceMappingURL=8.f26eeb3bc2042aec62d9.js.map

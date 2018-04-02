@@ -1,0 +1,2 @@
+webpackJsonp([3],{"2wNx":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a={render:function(){var e=this.$createElement,t=this._self._c||e;return t("div",{staticClass:"django"},[t("router-view")],1)},staticRenderFns:[]};var r=n("VU/8")({name:"django"},a,!1,function(e){n("bLgq")},"data-v-7794ee8a",null);t.default=r.exports},bLgq:function(e,t){}});
+//# sourceMappingURL=3.0f9d89794db58d62853b.js.map
