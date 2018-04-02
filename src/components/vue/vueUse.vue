@@ -139,8 +139,14 @@
               history: true,
               routes: routes
             })
-            router.beforeEach((to, from, next) => {  // 错误返回
-              if (to.matched.length === 0) {
+            router.beforeEach((to, from, next) => {
+              if (to['redirectedFrom']) { // 防止一级路由混乱
+                let str = new RegExp(to['redirectedFrom'])
+                if (str.test(from['fullPath']) === true) {
+                  return
+                }
+              }
+              if (to.matched.length === 0) { // 错误返回
                 from.name ? next({ name: from.name }) : next('/login')
               } else {
                 next()

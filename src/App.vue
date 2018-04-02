@@ -24,7 +24,8 @@ ul{
 a{
   text-decoration: none;
 }
-.page{
+@media screen and (min-width:1024px){
+  .page{
   background: #fff;
   margin-top: 10px;
   margin-left: 10px;
@@ -33,6 +34,7 @@ a{
   pre,p{
     font-family: '宋体';
     font-size: 17px;
+    }
   }
 }
 </style>

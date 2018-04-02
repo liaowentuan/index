@@ -132,6 +132,12 @@ const router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
+  if (to['redirectedFrom']) { // 防止一级路由混乱
+    let str = new RegExp(to['redirectedFrom'])
+    if (str.test(from['fullPath']) === true) {
+      return
+    }
+  }
   if (to.matched.length === 0) {
     from.name ? next({ name: from.name }) : next('/home')
   } else {

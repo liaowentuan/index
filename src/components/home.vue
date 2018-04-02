@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <aside>
-
+  <div class="container">
+    <aside :class="{ activeNar: aside, nonNar: !aside}">
+      <span>小小技术，不成敬意</span><b @click="removeAside()">×</b>
     </aside>
     <div class="shadow">
 
@@ -9,7 +9,9 @@
     <nav>
       <ul ref="navbar">
         <li class="treeLi">
-          <router-link to="/home/vue"><b @click="print(0)"><i class="fa fa-viacoin"></i><span>vue-cli开发</span></b></router-link>
+          <router-link to="/home/vue/" append>
+            <b @click="jump(0)"><i class="fa fa-viacoin"></i><span>vue-cli开发</span></b>
+          </router-link>
           <div v-if="navBar[0]">
             <ul>
               <li class="branch"><router-link to="/home/vue/init"><span>init</span></router-link></li>
@@ -23,7 +25,7 @@
         </li>
         <li class="treeLi">
           <router-link to="/home/git">
-            <b @click="print(1)"><i class="fa fa-git"></i><span>git命令</span></b>
+            <b @click="jump(1)"><i class="fa fa-git"></i><span>git命令</span></b>
           </router-link>
           <div v-if="navBar[1]">
             <ul>
@@ -33,7 +35,7 @@
         </li>
         <li class="treeLi">
           <router-link to="/home/nginx">
-            <b @click="print(2)"><i class="fa fa-chrome"></i><span>Nginx</span></b>
+            <b @click="jump(2)"><i class="fa fa-chrome"></i><span>Nginx</span></b>
           </router-link>
           <div v-if="navBar[2]">
             <ul>
@@ -44,7 +46,7 @@
         </li>
         <li class="treeLi">
           <router-link to="/home/python">
-            <b @click="print(3)"><i class="fa fa-product-hunt"></i><span>python</span></b>
+            <b @click="jump(3)"><i class="fa fa-product-hunt"></i><span>python</span></b>
           </router-link>
           <div v-if="navBar[3]">
             <ul>
@@ -55,7 +57,7 @@
         </li>
         <li class="treeLi">
           <router-link to="/home/Django">
-            <b @click="print(4)"><i class="fa fa-product-hunt"></i><span>Django</span></b>
+            <b @click="jump(4)"><i class="fa fa-product-hunt"></i><span>Django</span></b>
           </router-link>
           <div v-if="navBar[4]">
             <ul>
@@ -78,30 +80,44 @@ export default {
   name: 'home',
   data () {
     return {
-      navBar: [false, false, false, false]
+      navBar: [false, false, false, false, false],
+      aside: true
     }
   },
   methods: {
-    print (index) {
-      let arr1 = [false, false, false, false]
+    jump (index) {
+      let arr1 = [false, false, false, false, false]
       arr1[index] = true
-      let arr2 = [false, false, false, false]
+      let arr2 = [false, false, false, false, false]
       if (this.navBar[index] === true) {
         this.navBar = arr2
       } else {
         this.navBar = arr1
       }
+    },
+    removeAside () {
+      this.aside = false
+    },
+    jumpUrl (str) {
+      console.log(str)
     }
   },
   mounted () {
-    this.$nextTick(function () {
-      console.log(this.$refs)
+    this.$nextTick(function () { // 确保F5刷新后navbar的状态是对的
+      for (let i = 0; i < this.$refs['navbar'].children.length; i++) {
+        let li = this.$refs['navbar'].children[i]
+        if (li.children[0].className === 'router-link-active') {
+          this.jump(i)
+        }
+      }
     })
   }
 }
 </script>
 
 <style scoped lang="less">
+/* PC */
+@media screen and (min-width:1024px){
   main{
     margin: 85px 0 0 260px;
   }
@@ -113,6 +129,14 @@ aside{
   top: 0;
   background: #fff;
   z-index: 10;
+  line-height: 80px;
+  >span{
+    font-size: 30px;
+    margin-left: 30px;
+  }
+  >b{
+    display: none;
+  }
 }
 .table{
   display: table;
@@ -206,19 +230,68 @@ nav{
     }
   }
 }
-  @keyframes show {
-    0%{
-      margin-top: -20px;
+}
+/* mobile */
+@media screen and (max-width:1024px){
+  .container{
+    a{
+      color: #fff;
     }
-    30%{
-      margin-top: -5px;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    border-top: 44px solid #fff;
+    border-bottom: 34px solid #fff;
+    left: 0;
+    right: 0;
+    aside{
+      perspective: 0;
+      transition: all 0.3s ease-in-out;
+      font-size: 26px;
+      text-align: center;
+      b{
+        color: #ccc;
+      }
     }
-    60%{
-      margin-top: -3px;
+    .activeNar{
+      height: 36px;
+      transform:rotateX(0deg);
     }
-    100%{
-      margin-top: 0;
+    .nonNar {
+      height: 0;
+      transform:rotateX(90deg);
+    }
+    nav{
+      background: #37F;
+      .router-link-active{
+        width: 100%;
+      }
+    }
+    main{
+      position: relative;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      .table{
+        display: table;
+      }
     }
   }
+}
+@keyframes show {
+  0%{
+    margin-top: -20px;
+  }
+  30%{
+    margin-top: -5px;
+  }
+  60%{
+    margin-top: -3px;
+  }
+  100%{
+    margin-top: 0;
+  }
+}
 
 </style>
