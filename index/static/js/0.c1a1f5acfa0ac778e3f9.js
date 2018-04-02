@@ -1,0 +1,2 @@
+webpackJsonp([0],{"b+2i":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var s={render:function(){this.$createElement;this._self._c;return this._m(0)},staticRenderFns:[function(){var e=this.$createElement,t=this._self._c||e;return t("div",{staticClass:"page"},[t("h3",[this._v("版本回退上一次提交")]),this._v(" "),t("pre",[this._v("      git reset --hard HEAD^\n    ")])])}]};var i=n("Z0/y")({name:"reset"},s,!1,function(e){n("xjeC")},"data-v-f49f5eca",null);t.default=i.exports},xjeC:function(e,t){}});
+//# sourceMappingURL=0.c1a1f5acfa0ac778e3f9.js.map
