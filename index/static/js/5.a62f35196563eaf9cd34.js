@@ -1,0 +1,2 @@
+webpackJsonp([5],{Gufi:function(t,e){},ZN7y:function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var s={render:function(){var t=this.$createElement;return(this._self._c||t)("div",{staticClass:"page"},[this._v("\n    "+this._s(this.msg)+"\n")])},staticRenderFns:[]};var a=n("VU/8")({name:"wechat_http",data:function(){return{msg:"http"}}},s,!1,function(t){n("Gufi")},"data-v-628b0513",null);e.default=a.exports}});
+//# sourceMappingURL=5.a62f35196563eaf9cd34.js.map
