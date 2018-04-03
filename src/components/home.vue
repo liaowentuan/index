@@ -270,6 +270,7 @@ nav{
       transform:rotateX(90deg);
     }
     nav{
+      position: relative;
       float: left;
       width: 100%;
       .router-link-active{
