@@ -40,6 +40,22 @@ a{
 @media screen and (max-width:1024px){
   html{
     background: #fff;
+    .bottomBar{
+      .center{
+        display: block;
+        text-align: center;
+      }
+      .left{
+        float: left;
+        text-align: left;
+        width: 50%;
+      }
+      .right{
+        display: inline-block;
+        width: 50%;
+        text-align: right;
+      }
+    }
   }
 }
 </style>

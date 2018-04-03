@@ -23,6 +23,9 @@
       const wechatHttp = () => import(/* webpackChunkName: "group-nginx" */'@/components/nginx/wechat_http')
       const wechatHttps = () => import(/* webpackChunkName: "group-nginx" */'@/components/nginx/wechat_https')
     </pre>
+    <div class="bottomBar">
+        <router-link to="/home/vue/build" class="center"><span class="fa fa-angle-double-left"></span>&nbsp;<span>发布</span></router-link>
+      </div>
   </div>
 </template>
 

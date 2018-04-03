@@ -22,7 +22,7 @@
       <h3>5.试着运行</h3>
       <p>npm run dev</p>
       <div class="bottomBar">
-        <router-link to="/home/vue/package" class="center"><span>npm包</span></router-link>
+        <router-link to="/home/vue/package" class="center"><span>npm包</span>&nbsp;<span class="fa fa-angle-double-right"></span></router-link>
       </div>
     </div>
 </template>

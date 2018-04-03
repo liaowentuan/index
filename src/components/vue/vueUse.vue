@@ -164,6 +164,10 @@
           </pre>
         </li>
       </ul>
+      <div class="bottomBar">
+        <router-link to="/home/vue/package" class="left"><span class="fa fa-angle-double-left"></span>&nbsp;<span>npm包</span></router-link>
+        <router-link to="/home/vue/proxy" class="right"><span>代理</span>&nbsp;<span class="fa fa-angle-double-right"></span></router-link>
+      </div>
     </div>
 </template>
 

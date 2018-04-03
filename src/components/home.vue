@@ -253,7 +253,7 @@ nav{
     left: 0;
     right: 0;
     aside{
-      perspective: 0;
+      perspective: 1px;
       transition: all 0.3s ease-in-out;
       font-size: 26px;
       text-align: center;
@@ -283,7 +283,7 @@ nav{
         background: #E66666;
         transition: all 0.3s ease-in-out;
         float: left;
-        perspective: 0;
+        perspective: 1px;
         width: 100%;
       }
       a>b>i{
@@ -320,7 +320,7 @@ nav{
         }
       }
       .interButton,.outButton {
-        perspective: 0;
+        perspective: 1px;
         transform-origin: 0 0;
         position: absolute;
         z-index: 40;
@@ -345,15 +345,12 @@ nav{
       }
     }
     main{
-      overflow: hidden;
+      overflow: scroll;
       width: 100%;
       height: 100%;
       box-sizing: border-box;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
-      .table{
-        overflow: auto;
-      }
     }
   }
   .blueBackground{

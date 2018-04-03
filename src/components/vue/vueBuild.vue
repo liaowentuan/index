@@ -15,6 +15,10 @@
                 assetsPublicPath: '/',
         npm run build
       </pre>
+      <div class="bottomBar">
+        <router-link to="/home/vue/proxy" class="left"><span class="fa fa-angle-double-left"></span>&nbsp;<span>代理</span></router-link>
+        <router-link to="/home/vue/layout" class="right"><span>懒加载</span>&nbsp;<span class="fa fa-angle-double-right"></span></router-link>
+      </div>
     </div>
 </template>
 
