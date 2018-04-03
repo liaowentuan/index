@@ -71,8 +71,9 @@
       </ul>
     </nav>
     <main>
-      <div class="table"></div>
-      <router-view/>
+      <div class="table">
+        <router-view/>
+      </div>
     </main>
   </div>
 </template>
@@ -84,7 +85,8 @@ export default {
     return {
       navBar: [false, false, false, false, false],
       aside: true,
-      navToggle: true
+      navToggle: true,
+      background: 'blue'
     }
   },
   methods: {
@@ -140,9 +142,6 @@ aside{
   >b{
     display: none;
   }
-}
-.table{
-  display: table;
 }
 .shadow{
   top: 0;
@@ -271,20 +270,16 @@ nav{
       transform:rotateX(90deg);
     }
     nav{
-      position: relative;
+      float: left;
       width: 100%;
-      z-index: 10;
       .router-link-active{
         width: 100%;
-      }
-      ::after{
-        content: "";
-        display: block;
-        clear: both;
+        color:#fff;
+        text-shadow: 24px 4px 2px #f66666;
       }
       ul{
         transform-origin: 0 0;
-        background: #37F;
+        background: #E66666;
         transition: all 0.3s ease-in-out;
         float: left;
         perspective: 0;
@@ -293,8 +288,35 @@ nav{
       a>b>i{
         margin: 0 10px;
       }
-      .treeLi>a + div {
-        margin-left: 20px;
+      .treeLi{
+        font-size: 20px;
+        padding:0 3px;
+        a{
+          border-radius: 3px;
+          box-sizing: border-box;
+          transition: all 0.3s ease-in-out;
+          padding:5px 0;
+          text-align: center;
+          float: left;
+          width: 100%;
+          >b{
+            float: left;
+            width: 100%;
+          }
+        }
+        > a + div {
+          margin-left: 40px;
+          margin-right: 40px;
+        }
+      }
+      .branch{
+        font-size: 18px;
+        text-align: center;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        .router-link-active{
+          background: #E03333;
+        }
       }
       .interButton,.outButton {
         perspective: 0;
@@ -308,6 +330,9 @@ nav{
         height: 20px;
         text-align: center;
         transition: all 0.3s ease-in-out;
+      }
+      .router-link-active{
+        background: #E03333;
       }
       .rotateX90 {
         transform: rotateX(-90deg);
@@ -326,18 +351,23 @@ nav{
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
       .table{
-        display: table;
-      }
-      ::before{
-        content: "";
-        display: block;
-        clear: both;
+        overflow: scroll;
       }
     }
   }
   .blueBackground{
-    border-top: 44px solid #37F;
-    border-bottom: 34px solid #37F;
+    border-top: 44px solid #E66666;
+    border-bottom: 34px solid #E66666;
+    transition: all 0.3s ease-in-out;
+  }
+  .blackBackground{
+    border-top: 44px solid #333;
+    border-bottom: 34px solid #333;
+    transition: all 0.3s ease-in-out;
+  }
+  .writeBackground{
+    border-top: 44px solid #fff;
+    border-bottom: 34px solid #fff;
     transition: all 0.3s ease-in-out;
   }
 }
