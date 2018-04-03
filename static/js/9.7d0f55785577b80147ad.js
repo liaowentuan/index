@@ -1,2 +1,0 @@
-webpackJsonp([9],{PjHh:function(t,n,e){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var a={render:function(){var t=this.$createElement;return(this._self._c||t)("div",{staticClass:"page"},[this._v("\n    "+this._s(this.msg)+"\n")])},staticRenderFns:[]};var s=e("Z0/y")({name:"django-install",data:function(){return{msg:"django-install"}}},a,!1,function(t){e("mlNa")},"data-v-3d4d2a98",null);n.default=s.exports},mlNa:function(t,n){}});
-//# sourceMappingURL=9.7d0f55785577b80147ad.js.map
