@@ -1,0 +1,2 @@
+webpackJsonp([7],{EfgE:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={render:function(){var e=this.$createElement,t=this._self._c||e;return t("div",{staticClass:"python"},[t("router-view")],1)},staticRenderFns:[]};var a=n("Z0/y")({name:"python"},r,!1,function(e){n("odZ8")},"data-v-5be34de8",null);t.default=a.exports},odZ8:function(e,t){}});
+//# sourceMappingURL=7.09419496fc4bf5509dad.js.map

@@ -1,2 +1,0 @@
-webpackJsonp([10],{cJWs:function(e,t){},srnL:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={render:function(){var e=this.$createElement,t=this._self._c||e;return t("div",{staticClass:"git"},[t("router-view")],1)},staticRenderFns:[]};var s=n("Z0/y")({name:"git"},r,!1,function(e){n("cJWs")},"data-v-36ae019e",null);t.default=s.exports}});
-//# sourceMappingURL=10.a8b3de0bd684045c5833.js.map
