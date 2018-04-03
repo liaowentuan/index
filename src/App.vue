@@ -31,9 +31,30 @@ a{
   margin-left: 10px;
   padding: 10px 0 0 10px;
   min-height: 670px;
-  pre,p{
-    font-family: '宋体';
-    font-size: 17px;
+    pre,p{
+      font-family: '宋体';
+      font-size: 17px;
+    }
+  }
+}
+@media screen and (max-width:1024px){
+  html{
+    background: #fff;
+    .bottomBar{
+      .center{
+        display: block;
+        text-align: center;
+      }
+      .left{
+        float: left;
+        text-align: left;
+        width: 50%;
+      }
+      .right{
+        display: inline-block;
+        width: 50%;
+        text-align: right;
+      }
     }
   }
 }

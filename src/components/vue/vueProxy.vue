@@ -30,6 +30,10 @@
                     port: 8080, // 修改端口
             改完后,重启项目    npm run dev
       </pre>
+      <div class="bottomBar">
+        <router-link to="/home/vue/use" class="left"><span class="fa fa-angle-double-left"></span>&nbsp;<span>配置包</span></router-link>
+        <router-link to="/home/vue/build" class="right"><span>发布</span>&nbsp;<span class="fa fa-angle-double-right"></span></router-link>
+      </div>
     </div>
 </template>
 

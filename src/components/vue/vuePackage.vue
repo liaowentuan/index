@@ -12,6 +12,10 @@
       </pre>
       <h3>解释</h3>
       <p>  i => install <br> -D => --save-dev <br> -S => --save (不推荐,因为项目移动后，重新安装包不在dev上面的话，会编译错误)</p>
+      <div class="bottomBar">
+        <router-link to="/home/vue/init" class="left"><span class="fa fa-angle-double-left"></span>&nbsp;<span>init</span></router-link>
+        <router-link to="/home/vue/use" class="right"><span>配置包</span>&nbsp;<span class="fa fa-angle-double-right"></span></router-link>
+      </div>
     </div>
 </template>
 
