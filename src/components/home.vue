@@ -71,9 +71,8 @@
       </ul>
     </nav>
     <main>
-      <div class="table">
-        <router-view/>
-      </div>
+      <div class="table"></div>
+      <router-view/>
     </main>
   </div>
 </template>
@@ -150,6 +149,9 @@ aside{
   position: fixed;
   box-shadow: 2px 2px 3px 1px #ddd;
   z-index: -5;
+}
+.table{
+  display: table;
 }
 nav{
   top: 85px;
@@ -316,7 +318,8 @@ nav{
         border-top: 2px solid transparent;
         border-bottom: 2px solid transparent;
         .router-link-active{
-          background: #E03333;
+          background: #e66666;
+          box-shadow: 0px 0px 8px #e03333 inset;
         }
       }
       .interButton,.outButton {
@@ -333,10 +336,10 @@ nav{
         transition: all 0.3s ease-in-out;
       }
       .router-link-active{
-        background: #E03333;
+        background: #960000;
       }
       .rotateX90 {
-        transform: rotateX(-90deg);
+        transform: rotateX(91deg);
         height: 0;
       }
       .rotateX0 {
