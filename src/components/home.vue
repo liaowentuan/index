@@ -345,14 +345,14 @@ nav{
       }
     }
     main{
-      overflow: scroll;
+      overflow: hidden;
       width: 100%;
       height: 100%;
       box-sizing: border-box;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
       .table{
-        overflow: scroll;
+        overflow: auto;
       }
     }
   }

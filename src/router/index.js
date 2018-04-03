@@ -1,7 +1,26 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 // import login from '@/components/login'
-const home = () => import('@/components/home')
+
+import home from '@/components/home'
+import git from '@/components/git/git'
+import reset from '@/components/git/reset'
+import python from '@/components/python/python'
+import postgresql from '@/components/python/postgresql'
+import postgresqlCore from '@/components/python/postgresqlCore'
+import nginx from '@/components/nginx/nginx'
+import wechatHttp from '@/components/nginx/wechat_http'
+import wechatHttps from '@/components/nginx/wechat_https'
+import vueDocs from '@/components/vue/vueDocs'
+import vueInit from '@/components/vue/vueInit'
+import vuePackage from '@/components/vue/vuePackage'
+import vueUse from '@/components/vue/vueUse'
+import vueProxy from '@/components/vue/vueProxy'
+import vueBuild from '@/components/vue/vueBuild'
+import vueLayout from '@/components/vue/vueLayout'
+import Django from '@/components/Django/Django'
+import DjangoInstall from '@/components/Django/DjangoInstall'
+/* const home = () => import('@/components/home')
 
 const git = () => import('@/components/git/git')
 const reset = () => import('@/components/git/reset')
@@ -10,9 +29,9 @@ const python = () => import('@/components/python/python')
 const postgresql = () => import('@/components/python/postgresql')
 const postgresqlCore = () => import('@/components/python/postgresqlCore')
 
-const nginx = () => import(/* webpackChunkName: "group-nginx" */ '@/components/nginx/nginx')
-const wechatHttp = () => import(/* webpackChunkName: "group-nginx" */'@/components/nginx/wechat_http')
-const wechatHttps = () => import(/* webpackChunkName: "group-nginx" */'@/components/nginx/wechat_https')
+const nginx = () => import(/!* webpackChunkName: "group-nginx" *!/ '@/components/nginx/nginx')
+const wechatHttp = () => import(/!* webpackChunkName: "group-nginx" *!/'@/components/nginx/wechat_http')
+const wechatHttps = () => import(/!* webpackChunkName: "group-nginx" *!/'@/components/nginx/wechat_https')
 
 const vueDocs = () => import('@/components/vue/vueDocs')
 const vueInit = () => import('@/components/vue/vueInit')
@@ -23,7 +42,7 @@ const vueBuild = () => import('@/components/vue/vueBuild')
 const vueLayout = () => import('@/components/vue/vueLayout')
 
 const Django = () => import('@/components/Django/Django')
-const DjangoInstall = () => import('@/components/Django/DjangoInstall')
+const DjangoInstall = () => import('@/components/Django/DjangoInstall') */
 
 Vue.use(Router)
 
