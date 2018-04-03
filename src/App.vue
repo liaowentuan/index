@@ -31,10 +31,15 @@ a{
   margin-left: 10px;
   padding: 10px 0 0 10px;
   min-height: 670px;
-  pre,p{
-    font-family: '宋体';
-    font-size: 17px;
+    pre,p{
+      font-family: '宋体';
+      font-size: 17px;
     }
+  }
+}
+@media screen and (max-width:1024px){
+  html{
+    background: #fff;
   }
 }
 </style>

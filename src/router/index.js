@@ -10,9 +10,9 @@ const python = () => import('@/components/python/python')
 const postgresql = () => import('@/components/python/postgresql')
 const postgresqlCore = () => import('@/components/python/postgresqlCore')
 
-const nginx = () => import('@/components/nginx/nginx')
-const wechatHttp = () => import('@/components/nginx/wechat_http')
-const wechatHttps = () => import('@/components/nginx/wechat_https')
+const nginx = () => import(/* webpackChunkName: "group-nginx" */ '@/components/nginx/nginx')
+const wechatHttp = () => import(/* webpackChunkName: "group-nginx" */'@/components/nginx/wechat_http')
+const wechatHttps = () => import(/* webpackChunkName: "group-nginx" */'@/components/nginx/wechat_https')
 
 const vueDocs = () => import('@/components/vue/vueDocs')
 const vueInit = () => import('@/components/vue/vueInit')

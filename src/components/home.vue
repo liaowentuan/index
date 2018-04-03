@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" :class="{blueBackground:!navToggle}">
     <aside :class="{ activeNar: aside, nonNar: !aside}">
       <span>小小技术，不成敬意</span><b @click="removeAside()">×</b>
     </aside>
@@ -7,7 +7,9 @@
 
     </div>
     <nav>
-      <ul ref="navbar">
+      <b class="interButton" :class="{rotateX0: navToggle, rotateX90: !navToggle}" @click="navToggle=!navToggle">×</b>
+      <b class="outButton" :class="{rotateX90: navToggle, rotateX0: !navToggle}"  @click="navToggle=!navToggle"><span class="fa fa-reorder"></span></b>
+      <ul ref="navbar" :class="{rotateX0: navToggle, rotateX90: !navToggle}">
         <li class="treeLi">
           <router-link to="/home/vue/" append>
             <b @click="jump(0)"><i class="fa fa-viacoin"></i><span>vue-cli开发</span></b>
@@ -81,7 +83,8 @@ export default {
   data () {
     return {
       navBar: [false, false, false, false, false],
-      aside: true
+      aside: true,
+      navToggle: true
     }
   },
   methods: {
@@ -229,11 +232,16 @@ nav{
       }
     }
   }
-}
+  .interButton,.outButton {
+        display: none;
+      }
+  }
 }
 /* mobile */
 @media screen and (max-width:1024px){
+
   .container{
+    transition: all 0.3s ease-in-out;
     a{
       color: #fff;
     }
@@ -263,20 +271,74 @@ nav{
       transform:rotateX(90deg);
     }
     nav{
-      background: #37F;
+      position: relative;
+      width: 100%;
+      z-index: 10;
       .router-link-active{
         width: 100%;
       }
+      ::after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+      ul{
+        transform-origin: 0 0;
+        background: #37F;
+        transition: all 0.3s ease-in-out;
+        float: left;
+        perspective: 0;
+        width: 100%;
+      }
+      a>b>i{
+        margin: 0 10px;
+      }
+      .treeLi>a + div {
+        margin-left: 20px;
+      }
+      .interButton,.outButton {
+        perspective: 0;
+        transform-origin: 0 0;
+        position: absolute;
+        z-index: 40;
+        right: 10px;
+        top: 0;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+      }
+      .rotateX90 {
+        transform: rotateX(-90deg);
+        height: 0;
+      }
+      .rotateX0 {
+        transform: rotateX(0deg);
+        height: 100%;
+      }
     }
     main{
-      position: relative;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      overflow: scroll;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
       .table{
         display: table;
       }
+      ::before{
+        content: "";
+        display: block;
+        clear: both;
+      }
     }
+  }
+  .blueBackground{
+    border-top: 44px solid #37F;
+    border-bottom: 34px solid #37F;
+    transition: all 0.3s ease-in-out;
   }
 }
 @keyframes show {
