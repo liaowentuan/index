@@ -7,7 +7,7 @@
 
     </div>
     <nav>
-      <b class="interButton" :class="{rotateX0: navToggle, rotateX90: !navToggle}" @click="navToggle=!navToggle">×</b>
+      <b class="interButton" :class="{rotateX0: navToggle, rotateX90: !navToggle}" @click="navToggle=!navToggle; removeAside()">×</b>
       <b class="outButton" :class="{rotateX90: navToggle, rotateX0: !navToggle}"  @click="navToggle=!navToggle"><span class="fa fa-reorder"></span></b>
       <ul ref="navbar" :class="{rotateX0: navToggle, rotateX90: !navToggle}">
         <li class="treeLi">
@@ -22,6 +22,7 @@
               <li class="branch"><router-link to="/home/vue/proxy"><span>代理</span></router-link></li>
               <li class="branch"><router-link to="/home/vue/build"><span>发布</span></router-link></li>
               <li class="branch"><router-link to="/home/vue/layout"><span>懒加载</span></router-link></li>
+              <li class="branch"><router-link to="/home/vue/ps"><span>psSVG</span></router-link></li>
             </ul>
           </div>
         </li>
@@ -64,6 +65,17 @@
           <div v-if="navBar[4]">
             <ul>
               <li class="branch"><router-link to="/home/Django/install"><span>install</span></router-link></li>
+              <!--<li class="branch"><router-link to="/home/python/postgresqlCore"><span>postgresqlCore</span></router-link></li>-->
+            </ul>
+          </div>
+        </li>
+        <li class="treeLi">
+          <router-link to="/home/js">
+            <b @click="jump(4)"><i class="fa fa-product-hunt"></i><span>js</span></b>
+          </router-link>
+          <div v-if="navBar[4]">
+            <ul>
+              <li class="branch"><router-link to="/home/js/deepCopy"><span>深度拷贝</span></router-link></li>
               <!--<li class="branch"><router-link to="/home/python/postgresqlCore"><span>postgresqlCore</span></router-link></li>-->
             </ul>
           </div>

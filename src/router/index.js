@@ -3,14 +3,18 @@ import Router from 'vue-router'
 // import login from '@/components/login'
 
 import home from '@/components/home'
+
 import git from '@/components/git/git'
 import reset from '@/components/git/reset'
+
 import python from '@/components/python/python'
 import postgresql from '@/components/python/postgresql'
 import postgresqlCore from '@/components/python/postgresqlCore'
+
 import nginx from '@/components/nginx/nginx'
 import wechatHttp from '@/components/nginx/wechat_http'
 import wechatHttps from '@/components/nginx/wechat_https'
+
 import vueDocs from '@/components/vue/vueDocs'
 import vueInit from '@/components/vue/vueInit'
 import vuePackage from '@/components/vue/vuePackage'
@@ -18,8 +22,14 @@ import vueUse from '@/components/vue/vueUse'
 import vueProxy from '@/components/vue/vueProxy'
 import vueBuild from '@/components/vue/vueBuild'
 import vueLayout from '@/components/vue/vueLayout'
+import svg from '@/components/vue/psSVG'
+
 import Django from '@/components/Django/Django'
 import DjangoInstall from '@/components/Django/DjangoInstall'
+
+import js from '@/components/js/js'
+import deepCopy from '@/components/js/deepCopy'
+
 /* const home = () => import('@/components/home')
 
 const git = () => import('@/components/git/git')
@@ -42,7 +52,10 @@ const vueBuild = () => import('@/components/vue/vueBuild')
 const vueLayout = () => import('@/components/vue/vueLayout')
 
 const Django = () => import('@/components/Django/Django')
-const DjangoInstall = () => import('@/components/Django/DjangoInstall') */
+const DjangoInstall = () => import('@/components/Django/DjangoInstall')
+
+const js = () => import('@/components/js/js')
+const deepCopy = () => import('@/components/js/deepCopy') */
 
 Vue.use(Router)
 
@@ -86,6 +99,10 @@ let routes = [
           {
             path: '/home/vue/layout',
             component: vueLayout
+          },
+          {
+            path: '/home/vue/ps',
+            component: svg
           }
         ]
       },
@@ -138,6 +155,17 @@ let routes = [
           {
             component: wechatHttps,
             path: '/home/nginx/wechat_https'
+          }
+        ]
+      },
+      {
+        path: '/home/js',
+        component: js,
+        redirect: '/home/js/deepCopy',
+        children: [
+          {
+            component: deepCopy,
+            path: '/home/js/deepCopy'
           }
         ]
       }
