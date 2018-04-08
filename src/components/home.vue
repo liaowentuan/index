@@ -65,15 +65,15 @@
           <div v-if="navBar[4]">
             <ul>
               <li class="branch"><router-link to="/home/Django/install"><span>install</span></router-link></li>
-              <!--<li class="branch"><router-link to="/home/python/postgresqlCore"><span>postgresqlCore</span></router-link></li>-->
+              <li class="branch"><router-link to="/home/Django/virtualenv"><span>虚拟环境</span></router-link></li>
             </ul>
           </div>
         </li>
         <li class="treeLi">
           <router-link to="/home/js">
-            <b @click="jump(4)"><i class="fa fa-product-hunt"></i><span>js</span></b>
+            <b @click="jump(5)"><i class="fa fa-product-hunt"></i><span>js</span></b>
           </router-link>
-          <div v-if="navBar[4]">
+          <div v-if="navBar[5]">
             <ul>
               <li class="branch"><router-link to="/home/js/deepCopy"><span>深度拷贝</span></router-link></li>
               <!--<li class="branch"><router-link to="/home/python/postgresqlCore"><span>postgresqlCore</span></router-link></li>-->
@@ -94,7 +94,7 @@ export default {
   name: 'home',
   data () {
     return {
-      navBar: [false, false, false, false, false],
+      navBar: [false, false, false, false, false, false],
       aside: true,
       navToggle: true,
       background: 'blue'
@@ -102,9 +102,9 @@ export default {
   },
   methods: {
     jump (index) {
-      let arr1 = [false, false, false, false, false]
+      let arr1 = [false, false, false, false, false, false]
       arr1[index] = true
-      let arr2 = [false, false, false, false, false]
+      let arr2 = [false, false, false, false, false, false]
       if (this.navBar[index] === true) {
         this.navBar = arr2
       } else {

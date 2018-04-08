@@ -26,6 +26,7 @@ import svg from '@/components/vue/psSVG'
 
 import Django from '@/components/Django/Django'
 import DjangoInstall from '@/components/Django/DjangoInstall'
+import DjangoVirtualenv from '@/components/Django/DjangoVirtualenv'
 
 import js from '@/components/js/js'
 import deepCopy from '@/components/js/deepCopy'
@@ -125,6 +126,10 @@ let routes = [
           {
             component: DjangoInstall,
             path: '/home/Django/install'
+          },
+          {
+            component: DjangoVirtualenv,
+            path: '/home/Django/virtualenv'
           }
         ]
       },
