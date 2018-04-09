@@ -131,10 +131,6 @@ let routes = [
           {
             component: DjangoVirtualenv,
             path: '/home/Django/virtualenv'
-          },
-          {
-            component: getopt,
-            path: '/home/Django/getopt'
           }
         ]
       },
@@ -150,6 +146,10 @@ let routes = [
           {
             component: postgresqlCore,
             path: '/home/python/postgresqlCore'
+          },
+          {
+            component: getopt,
+            path: '/home/Django/getopt'
           }
         ]
       },

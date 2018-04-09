@@ -55,6 +55,7 @@
             <ul>
               <li class="branch"><router-link to="/home/python/postgresql"><span>postgresql</span></router-link></li>
               <li class="branch"><router-link to="/home/python/postgresqlCore"><span>postgresqlCore</span></router-link></li>
+              <li class="branch"><router-link to="/home/Django/getopt"><span>带参脚本</span></router-link></li>
             </ul>
           </div>
         </li>
@@ -66,7 +67,6 @@
             <ul>
               <li class="branch"><router-link to="/home/Django/install"><span>install</span></router-link></li>
               <li class="branch"><router-link to="/home/Django/virtualenv"><span>虚拟环境</span></router-link></li>
-              <li class="branch"><router-link to="/home/Django/getopt"><span>带参脚本</span></router-link></li>
             </ul>
           </div>
         </li>
