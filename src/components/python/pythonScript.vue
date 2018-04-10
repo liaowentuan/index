@@ -27,12 +27,8 @@
         #         \  \ `_.   \_ __\ /__ _/   .-` /  /
         #     =====`-.____`.___ \_____/___.-`___.-'=====
         #                       `=---='
-        #
-        #
         #     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        #
         #               佛祖保佑         永无BUG
-        #
 
         import sys
         import getopt
@@ -78,7 +74,6 @@
 
         def tar (s, n, b, u) :
             psycopg2.extras.register_uuid()
-            print('输入文件夹=', s, '大文件名,带路径=', n, '大文件名=', b, '输出文件夹=', u)
             src = s
             name = n
             bigfile_name = b
@@ -189,7 +184,7 @@
             print(
                 '''
 
-            请注意，该脚本基于  psycopg2 ,请检查python环境中是否存在 psycopg2 和 psycopg2-binary 两个包 请运行‘pip install -U pip ; pip install psycopg2’ 以安装二进制psycopg2的包,如果无法用./执行，请使用 python fileMergeSline.py <命令> 来执行
+            请注意，该脚本基于  psycopg2 ,请检查python环境中是否存在 psycopg2 和 psycopg2-binary 两个包 请运行‘pip install -U pip ; pip install psycopg2’ 以安装二进制psycopg2的包,如果无法用./执行，请使用 python fileMergeSline.py 《命令》 来执行
             帮助:     必填项《 》  选填项 [ ]
             功能：
             -h --help             [打开帮助文档]
