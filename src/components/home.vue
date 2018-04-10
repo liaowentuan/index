@@ -55,7 +55,8 @@
             <ul>
               <li class="branch"><router-link to="/home/python/postgresql"><span>postgresql</span></router-link></li>
               <li class="branch"><router-link to="/home/python/postgresqlCore"><span>postgresqlCore</span></router-link></li>
-              <li class="branch"><router-link to="/home/Django/getopt"><span>带参脚本</span></router-link></li>
+              <li class="branch"><router-link to="/home/python/getopt"><span>带参脚本</span></router-link></li>
+              <li class="branch"><router-link to="/home/python/pythonScript"><span>脚本demo</span></router-link></li>
             </ul>
           </div>
         </li>

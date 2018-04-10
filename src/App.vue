@@ -34,11 +34,17 @@ a{
     pre,p{
       font-family: '宋体';
       font-size: 17px;
+      word-wrap:break-word;
+      white-space:pre-wrap;
     }
   }
 }
 @media screen and (max-width:1024px){
   html{
+    pre,p{
+      word-wrap:break-word;
+      white-space:pre-wrap;
+    }
     background: #fff;
     .bottomBar{
       .center{

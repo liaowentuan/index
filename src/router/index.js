@@ -11,6 +11,7 @@ import python from '@/components/python/python'
 import postgresql from '@/components/python/postgresql'
 import postgresqlCore from '@/components/python/postgresqlCore'
 import getopt from '@/components/python/getopt'
+import pythonScript from '@/components/python/pythonScript'
 
 import nginx from '@/components/nginx/nginx'
 import wechatHttp from '@/components/nginx/wechat_http'
@@ -149,7 +150,11 @@ let routes = [
           },
           {
             component: getopt,
-            path: '/home/Django/getopt'
+            path: '/home/python/getopt'
+          },
+          {
+            component: pythonScript,
+            path: '/home/python/pythonScript'
           }
         ]
       },

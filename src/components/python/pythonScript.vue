@@ -294,12 +294,7 @@
 
 <script>
 export default {
-  name: 'script',
-  data () {
-    return {
-      msg: 'this is script'
-    }
-  }
+  name: 'pythonScript'
 }
 </script>
 
