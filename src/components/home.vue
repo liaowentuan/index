@@ -82,6 +82,16 @@
             </ul>
           </div>
         </li>
+        <li class="treeLi">
+          <router-link to="/home/linux">
+            <b @click="jump(6)"><i class="fa fa-product-hunt"></i><span>Django</span></b>
+          </router-link>
+          <div v-if="navBar[6]">
+            <ul>
+              <li class="branch"><router-link to="/home/linux/tar"><span>压缩</span></router-link></li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </nav>
     <main>
