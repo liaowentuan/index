@@ -84,7 +84,7 @@
         </li>
         <li class="treeLi">
           <router-link to="/home/linux">
-            <b @click="jump(6)"><i class="fa fa-product-hunt"></i><span>Django</span></b>
+            <b @click="jump(6)"><i class="fa fa-product-hunt"></i><span>linux(Ubuntu)</span></b>
           </router-link>
           <div v-if="navBar[6]">
             <ul>
@@ -114,9 +114,9 @@ export default {
   },
   methods: {
     jump (index) {
-      let arr1 = [false, false, false, false, false, false]
+      let arr1 = [false, false, false, false, false, false, false]
       arr1[index] = true
-      let arr2 = [false, false, false, false, false, false]
+      let arr2 = [false, false, false, false, false, false, false]
       if (this.navBar[index] === true) {
         this.navBar = arr2
       } else {

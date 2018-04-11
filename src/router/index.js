@@ -33,6 +33,9 @@ import DjangoVirtualenv from '@/components/Django/DjangoVirtualenv'
 import js from '@/components/js/js'
 import deepCopy from '@/components/js/deepCopy'
 
+import linux from '@/components/linux-ubuntu/linuxUbuntu'
+import tar from '@/components/linux-ubuntu/tar'
+
 /* const home = () => import('@/components/home')
 
 const git = () => import('@/components/git/git')
@@ -181,6 +184,17 @@ let routes = [
           {
             component: deepCopy,
             path: '/home/js/deepCopy'
+          }
+        ]
+      },
+      {
+        path: '/home/linux',
+        component: linux,
+        redirect: '/home/linux/tar',
+        children: [
+          {
+            component: tar,
+            path: '/home/linux/tar'
           }
         ]
       }
