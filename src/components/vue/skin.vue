@@ -6,11 +6,11 @@
       <pre>
         使用less编译器
 
+        定义less文件:  colors.less
+
         @h1Font: #333; // 标题
         @h4Font: #666; // 副标题
         @pFont:  #999; // 辅助文字
-
-        定义less文件:  colors.less
 
         .style1{
           .change(#E1E2E8 , #76abd3 ,#4785b8, all 0.5s linear); /* 宝蓝 [0,1,6] 蓝色 */
