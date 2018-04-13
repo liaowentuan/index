@@ -25,6 +25,7 @@ import vueProxy from '@/components/vue/vueProxy'
 import vueBuild from '@/components/vue/vueBuild'
 import vueLayout from '@/components/vue/vueLayout'
 import svg from '@/components/vue/psSVG'
+import skin from '@/components/vue/skin'
 
 import Django from '@/components/Django/Django'
 import DjangoInstall from '@/components/Django/DjangoInstall'
@@ -109,6 +110,10 @@ let routes = [
           {
             path: '/home/vue/ps',
             component: svg
+          },
+          {
+            path: '/home/vue/skin',
+            component: skin
           }
         ]
       },

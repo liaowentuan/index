@@ -23,6 +23,7 @@
               <li class="branch"><router-link to="/home/vue/build"><span>发布</span></router-link></li>
               <li class="branch"><router-link to="/home/vue/layout"><span>懒加载</span></router-link></li>
               <li class="branch"><router-link to="/home/vue/ps"><span>psSVG</span></router-link></li>
+              <li class="branch"><router-link to="/home/vue/skin"><span>换肤</span></router-link></li>
             </ul>
           </div>
         </li>
