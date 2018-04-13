@@ -34,6 +34,26 @@
             transition: @transition;
           }
         }
+
+        在换肤按钮所在组件
+
+        export default {
+          name: 'm-header',
+          methods: {
+            changeStyle (num) {
+              document.body.className = 'style' + num
+              window.localStorage.setItem('skin', num)
+            }
+          },
+          created () {
+            let num = window.localStorage.getItem('skin')
+            if (num) {
+              document.body.className = 'style' + num
+            } else {
+              document.body.className = 'style1'
+            }
+          }
+        }
       </pre>
     </div>
 </template>
