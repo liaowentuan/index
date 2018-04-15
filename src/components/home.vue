@@ -54,6 +54,7 @@
           </router-link>
           <div v-if="navBar[3]">
             <ul>
+              <li class="branch"><router-link to="/home/python/pythonbase"><span>python基础</span></router-link></li>
               <li class="branch"><router-link to="/home/python/postgresql"><span>postgresql</span></router-link></li>
               <li class="branch"><router-link to="/home/python/postgresqlCore"><span>postgresqlCore</span></router-link></li>
               <li class="branch"><router-link to="/home/python/getopt"><span>带参脚本</span></router-link></li>

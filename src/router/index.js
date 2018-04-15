@@ -13,6 +13,9 @@ import postgresqlCore from '@/components/python/postgresqlCore'
 import getopt from '@/components/python/getopt'
 import pythonScript from '@/components/python/pythonScript'
 
+import pythonBase from '@/components/python/pythonBase/pythonBase'
+import pythonVariable from '@/components/python/pythonBase/pythonVariable'
+
 import nginx from '@/components/nginx/nginx'
 import wechatHttp from '@/components/nginx/wechat_http'
 import wechatHttps from '@/components/nginx/wechat_https'
@@ -148,6 +151,29 @@ let routes = [
         component: python,
         redirect: '/home/python/postgresql',
         children: [
+          {
+            component: pythonBase,
+            path: '/home/python/pythonbase',
+            redirect: '/home/python/pythonbase/variable',
+            children: [
+              {
+                component: pythonVariable,
+                path: '/home/python/pythonbase/variable'
+              }
+            ]
+          },
+          /* ,
+          {
+            component: postgresql,
+            path: '/home/python/postgresql',
+            redirect: '/home/python/postgresql',
+            children: [
+              {
+                component: pythonVariable,
+                path: '/home/python/postgresql/pythonVariable'
+              }
+            ]
+          } */
           {
             component: postgresql,
             path: '/home/python/postgresql'
