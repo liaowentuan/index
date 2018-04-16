@@ -17,6 +17,7 @@ import pythonBase from '@/components/python/pythonBase/pythonBase'
 import pythonType from '@/components/python/pythonBase/pythonType'
 import pythonVariable from '@/components/python/pythonBase/pythonVariable'
 import pythonFormat from '@/components/python/pythonBase/pythonFormat'
+import pythonConversion from '@/components/python/pythonBase/pythonConversion'
 
 import nginx from '@/components/nginx/nginx'
 import wechatHttp from '@/components/nginx/wechat_http'
@@ -156,19 +157,23 @@ let routes = [
           {
             component: pythonBase,
             path: '/home/python/pythonbase',
-            redirect: '/home/python/pythonbase/variable',
+            redirect: '/home/python/pythonBase/variable',
             children: [
               {
                 component: pythonVariable,
-                path: '/home/python/pythonbase/variable'
+                path: '/home/python/pythonBase/variable'
               },
               {
                 component: pythonType,
-                path: '/home/python/pythonbase/pythonType'
+                path: '/home/python/pythonBase/pythonType'
               },
               {
                 component: pythonFormat,
-                path: '/home/python/pythonbase/Format'
+                path: '/home/python/pythonBase/Format'
+              },
+              {
+                component: pythonConversion,
+                path: '/home/python/pythonBase/conversion'
               }
             ]
           },

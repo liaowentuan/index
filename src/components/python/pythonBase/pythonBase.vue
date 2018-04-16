@@ -1,9 +1,10 @@
 <template>
     <div class="python-base page">
         <ul>
-          <li><router-link to="/home/python/pythonbase/pythonType">python类型</router-link></li>
-          <li><router-link to="/home/python/pythonbase/variable">变量</router-link></li>
-          <li><router-link to="/home/python/pythonbase/Format">字符串格式化</router-link></li>
+          <li><router-link to="/home/python/pythonBase/pythonType">python类型</router-link></li>
+          <li><router-link to="/home/python/pythonBase/variable">变量</router-link></li>
+          <li><router-link to="/home/python/pythonBase/Format">字符串格式化</router-link></li>
+          <li><router-link to="/home/python/pythonBase/conversion">转换</router-link></li>
         </ul>
         <router-view/>
     </div>
