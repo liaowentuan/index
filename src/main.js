@@ -9,6 +9,7 @@ import App from './App'
 import store from './store/store'
 import echarts from 'echarts'
 import 'font-awesome/css/font-awesome.min.css'
+import '../static/icomoon/style.css'
 
 // 添加请求拦截器
 axios.interceptors.request.use(function (config) {

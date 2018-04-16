@@ -14,8 +14,9 @@ import getopt from '@/components/python/getopt'
 import pythonScript from '@/components/python/pythonScript'
 
 import pythonBase from '@/components/python/pythonBase/pythonBase'
-import pythonVariable from '@/components/python/pythonBase/pythonVariable'
 import pythonType from '@/components/python/pythonBase/pythonType'
+import pythonVariable from '@/components/python/pythonBase/pythonVariable'
+import pythonFormat from '@/components/python/pythonBase/pythonFormat'
 
 import nginx from '@/components/nginx/nginx'
 import wechatHttp from '@/components/nginx/wechat_http'
@@ -163,7 +164,11 @@ let routes = [
               },
               {
                 component: pythonType,
-                path:'/home/python/pythonbase/pythonType'
+                path: '/home/python/pythonbase/pythonType'
+              },
+              {
+                component: pythonFormat,
+                path: '/home/python/pythonbase/Format'
               }
             ]
           },

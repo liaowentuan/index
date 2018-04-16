@@ -12,7 +12,7 @@
       <ul ref="navbar" :class="{rotateX0: navToggle, rotateX90: !navToggle}">
         <li class="treeLi">
           <router-link to="/home/vue/" append>
-            <b @click="jump(0)"><i class="fa fa-viacoin"></i><span>vue-cli开发</span></b>
+            <b @click="jump(0)"><i class="icon-vue"></i><span>vue-cli开发</span></b>
           </router-link>
           <div v-if="navBar[0]">
             <ul>
@@ -29,7 +29,7 @@
         </li>
         <li class="treeLi">
           <router-link to="/home/git">
-            <b @click="jump(1)"><i class="fa fa-git"></i><span>git命令</span></b>
+            <b @click="jump(1)"><i class="icon-git"></i><span>git命令</span></b>
           </router-link>
           <div v-if="navBar[1]">
             <ul>
@@ -39,7 +39,7 @@
         </li>
         <li class="treeLi">
           <router-link to="/home/nginx">
-            <b @click="jump(2)"><i class="fa fa-chrome"></i><span>Nginx</span></b>
+            <b @click="jump(2)"><i class="icon-nginx"></i><span>Nginx</span></b>
           </router-link>
           <div v-if="navBar[2]">
             <ul>
@@ -50,7 +50,7 @@
         </li>
         <li class="treeLi">
           <router-link to="/home/python">
-            <b @click="jump(3)"><i class="fa fa-product-hunt"></i><span>python</span></b>
+            <b @click="jump(3)"><i class="icon-python"></i><span>python</span></b>
           </router-link>
           <div v-if="navBar[3]">
             <ul>
@@ -64,7 +64,7 @@
         </li>
         <li class="treeLi">
           <router-link to="/home/Django">
-            <b @click="jump(4)"><i class="fa fa-product-hunt"></i><span>Django</span></b>
+            <b @click="jump(4)"><i class="icon-django"></i><span>Django</span></b>
           </router-link>
           <div v-if="navBar[4]">
             <ul>
@@ -75,7 +75,7 @@
         </li>
         <li class="treeLi">
           <router-link to="/home/js">
-            <b @click="jump(5)"><i class="fa fa-product-hunt"></i><span>js</span></b>
+            <b @click="jump(5)"><i class="icon-js"></i><span>js</span></b>
           </router-link>
           <div v-if="navBar[5]">
             <ul>
@@ -86,7 +86,7 @@
         </li>
         <li class="treeLi">
           <router-link to="/home/linux">
-            <b @click="jump(6)"><i class="fa fa-product-hunt"></i><span>linux(Ubuntu)</span></b>
+            <b @click="jump(6)"><i class="icon-ubuntu"></i><span>linux(Ubuntu)</span></b>
           </router-link>
           <div v-if="navBar[6]">
             <ul>
