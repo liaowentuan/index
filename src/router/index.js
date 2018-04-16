@@ -15,6 +15,7 @@ import pythonScript from '@/components/python/pythonScript'
 
 import pythonBase from '@/components/python/pythonBase/pythonBase'
 import pythonVariable from '@/components/python/pythonBase/pythonVariable'
+import pythonType from '@/components/python/pythonBase/pythonType'
 
 import nginx from '@/components/nginx/nginx'
 import wechatHttp from '@/components/nginx/wechat_http'
@@ -159,6 +160,10 @@ let routes = [
               {
                 component: pythonVariable,
                 path: '/home/python/pythonbase/variable'
+              },
+              {
+                component: pythonType,
+                path:'/home/python/pythonbase/pythonType'
               }
             ]
           },
