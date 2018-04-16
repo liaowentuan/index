@@ -1,6 +1,15 @@
 <template>
     <div class="python-variable">
-        {{msg}}
+        <h3>变量</h3>
+        <pre>
+          弱类型 和前端js一致
+
+          不可使用关键字生命变量！！！
+          import keyword
+          print(keyword.kwlist)
+
+          变量名由字母、下划线和数字组成，且数字不能开头
+        </pre>
     </div>
 </template>
 
