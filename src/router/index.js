@@ -18,6 +18,7 @@ import pythonType from '@/components/python/pythonBase/pythonType'
 import pythonVariable from '@/components/python/pythonBase/pythonVariable'
 import pythonFormat from '@/components/python/pythonBase/pythonFormat'
 import pythonConversion from '@/components/python/pythonBase/pythonConversion'
+import pythonLoop from '@/components/python/pythonBase/pythonLoop'
 
 import nginx from '@/components/nginx/nginx'
 import wechatHttp from '@/components/nginx/wechat_http'
@@ -174,6 +175,10 @@ let routes = [
               {
                 component: pythonConversion,
                 path: '/home/python/pythonBase/conversion'
+              },
+              {
+                component: pythonLoop,
+                path: '/home/python/pythonBase/loop'
               }
             ]
           },
