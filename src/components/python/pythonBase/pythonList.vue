@@ -2,13 +2,44 @@
     <div>
       <h3>List 列表</h3>
       <h3>查</h3>
+      <!--eslint-disable-->
       <pre>
         namesList = ['xiaoWang','xiaoZhang','xiaoHua']
         print(namesList[2])  等同于  print(nameList[-1])
         >>> 'xiaoHua'
+
+        index, count
+        index和count与字符串中的用法相同
+
+        >>> a = ['a', 'b', 'c', 'a', 'b']
+        >>> a.index('a', 1, 3) # 注意是左闭右开区间
+        Traceback (most recent call last):
+          File "< stdin >", line 1, in < module >
+        ValueError: 'a' is not in list
+        >>> a.index('a', 1, 4)
+        3
+        >>> a.count('b')
+        2
+        >>> a.count('d')
+        0
+
+        in（存在）,如果存在那么结果为true，否则为false
+        not in（不存在），如果不存在那么结果为true，否则false
+
+        #待查找的列表
+        nameList = ['xiaoWang','xiaoZhang','xiaoHua']
+
+        #获取用户要查找的名字
+        findName = input('请输入要查找的姓名:')
+
+        #查找是否存在
+        if findName in nameList:
+          print('在字典中找到了相同的名字')
+        else:
+          print('没有找到')
+
       </pre>
       <h3>循环列表</h3>
-      <!--eslint-disable-->
       <pre>
         demo:
             namesList = ['xiaoWang','xiaoZhang','xiaoHua']
