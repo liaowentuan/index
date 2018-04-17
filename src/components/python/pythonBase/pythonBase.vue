@@ -6,6 +6,7 @@
           <li><router-link to="/home/python/pythonBase/Format">字符串格式化</router-link></li>
           <li><router-link to="/home/python/pythonBase/conversion">转换</router-link></li>
           <li><router-link to="/home/python/pythonBase/loop">循环</router-link></li>
+          <li><router-link to="/home/python/pythonBase/string">字符串</router-link></li>
         </ul>
         <router-view/>
     </div>
