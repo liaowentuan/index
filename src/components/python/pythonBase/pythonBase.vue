@@ -8,6 +8,7 @@
           <li><router-link to="/home/python/pythonBase/loop">循环</router-link></li>
           <li><router-link to="/home/python/pythonBase/string">字符串</router-link></li>
           <li><router-link to="/home/python/pythonBase/list">list列表(web 数组)</router-link></li>
+          <li><router-link to="/home/python/pythonBase/tuple">tuple元祖(不可改数组)</router-link></li>
         </ul>
         <router-view/>
     </div>
