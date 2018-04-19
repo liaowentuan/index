@@ -22,6 +22,7 @@ import pythonLoop from '@/components/python/pythonBase/pythonLoop'
 import pythonString from '@/components/python/pythonBase/pythonString'
 import pythonList from '@/components/python/pythonBase/pythonList'
 import pythonTuple from '@/components/python/pythonBase/pythonTuple'
+import pythonDictionary from '@/components/python/pythonBase/pythonDictionary'
 
 import nginx from '@/components/nginx/nginx'
 import wechatHttp from '@/components/nginx/wechat_http'
@@ -194,6 +195,10 @@ let routes = [
               {
                 component: pythonTuple,
                 path: '/home/python/pythonBase/tuple'
+              },
+              {
+                component: pythonDictionary,
+                path: '/home/python/pythonBase/dictionary'
               }
             ]
           },
