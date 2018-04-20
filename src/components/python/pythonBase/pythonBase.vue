@@ -10,6 +10,7 @@
           <li><router-link to="/home/python/pythonBase/list">list列表(web 数组)</router-link></li>
           <li><router-link to="/home/python/pythonBase/tuple">tuple元祖(不可改数组)</router-link></li>
           <li><router-link to="/home/python/pythonBase/dictionary">dict字典(web对象)</router-link></li>
+          <li><router-link to="/home/python/pythonBase/ergodic">遍历元素</router-link></li>
         </ul>
         <router-view/>
     </div>

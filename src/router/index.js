@@ -23,6 +23,7 @@ import pythonString from '@/components/python/pythonBase/pythonString'
 import pythonList from '@/components/python/pythonBase/pythonList'
 import pythonTuple from '@/components/python/pythonBase/pythonTuple'
 import pythonDictionary from '@/components/python/pythonBase/pythonDictionary'
+import pythonErgodic from '@/components/python/pythonBase/pythonErgodic'
 
 import nginx from '@/components/nginx/nginx'
 import wechatHttp from '@/components/nginx/wechat_http'
@@ -199,6 +200,10 @@ let routes = [
               {
                 component: pythonDictionary,
                 path: '/home/python/pythonBase/dictionary'
+              },
+              {
+                component: pythonErgodic,
+                path: '/home/python/pythonBase/ergodic'
               }
             ]
           },
