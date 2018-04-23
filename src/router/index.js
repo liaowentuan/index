@@ -24,6 +24,7 @@ import pythonList from '@/components/python/pythonBase/pythonList'
 import pythonTuple from '@/components/python/pythonBase/pythonTuple'
 import pythonDictionary from '@/components/python/pythonBase/pythonDictionary'
 import pythonErgodic from '@/components/python/pythonBase/pythonErgodic'
+import pythonOperator from '@/components/python/pythonBase/pythonOperator'
 
 import nginx from '@/components/nginx/nginx'
 import wechatHttp from '@/components/nginx/wechat_http'
@@ -204,6 +205,10 @@ let routes = [
               {
                 component: pythonErgodic,
                 path: '/home/python/pythonBase/ergodic'
+              },
+              {
+                component: pythonOperator,
+                path: '/home/python/pythonBase/operator'
               }
             ]
           },
