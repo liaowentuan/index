@@ -26,6 +26,9 @@ import pythonDictionary from '@/components/python/pythonBase/pythonDictionary'
 import pythonErgodic from '@/components/python/pythonBase/pythonErgodic'
 import pythonOperator from '@/components/python/pythonBase/pythonOperator'
 
+import pythonCore from '@/components/python/pythonCore/pythonCore'
+import pythonFunction from '@/components/python/pythonCore/pythonFunction'
+
 import nginx from '@/components/nginx/nginx'
 import wechatHttp from '@/components/nginx/wechat_http'
 import wechatHttps from '@/components/nginx/wechat_https'
@@ -159,7 +162,7 @@ let routes = [
       {
         path: '/home/python',
         component: python,
-        redirect: '/home/python/postgresql',
+        redirect: '/home/python/pythonbase',
         children: [
           {
             component: pythonBase,
@@ -212,18 +215,17 @@ let routes = [
               }
             ]
           },
-          /* ,
           {
-            component: postgresql,
-            path: '/home/python/postgresql',
-            redirect: '/home/python/postgresql',
+            component: pythonCore,
+            path: '/home/python/pythonCore',
+            redirect: '/home/python/pythonCore/function',
             children: [
               {
-                component: pythonVariable,
-                path: '/home/python/postgresql/pythonVariable'
+                component: pythonFunction,
+                path: '/home/python/pythonCore/function'
               }
             ]
-          } */
+          },
           {
             component: postgresql,
             path: '/home/python/postgresql'
