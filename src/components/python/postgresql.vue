@@ -5,6 +5,11 @@
   为了让psycopg2兼容python3 下载二进制的psycopg2包
   pip install -U pip
   pip install psycopg2
+
+  如果失败的话
+  sudo apt install pip3
+  pip3 install psycopg2
+  pip3 install psycopg2-binary
         </pre>
         <h3>使用psycopg2包 另外还要install psycopg2-binary</h3>
         <pre>
