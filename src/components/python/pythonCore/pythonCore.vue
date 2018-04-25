@@ -2,6 +2,7 @@
     <div class="python-Core page">
         <ul>
           <li><router-link to="/home/python/pythonCore/function">函数</router-link></li>
+          <li><router-link to="/home/python/pythonCore/recursion">递归函数</router-link></li>
         </ul>
         <router-view/>
     </div>

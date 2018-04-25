@@ -28,6 +28,7 @@ import pythonOperator from '@/components/python/pythonBase/pythonOperator'
 
 import pythonCore from '@/components/python/pythonCore/pythonCore'
 import pythonFunction from '@/components/python/pythonCore/pythonFunction'
+import pythonRecursion from '@/components/python/pythonCore/pythonRecursion'
 
 import nginx from '@/components/nginx/nginx'
 import wechatHttp from '@/components/nginx/wechat_http'
@@ -223,6 +224,10 @@ let routes = [
               {
                 component: pythonFunction,
                 path: '/home/python/pythonCore/function'
+              },
+              {
+                component: pythonRecursion,
+                path: '/home/python/pythonCore/recursion'
               }
             ]
           },
