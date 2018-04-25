@@ -4,7 +4,7 @@
       <pre>
         增加 || 改变值
 
-        log () {
+        selectPic () {
           for (let i = 0; this.$refs.fileList.files.length > i; i++) {
             let r = new FileReader()
             r.onload = () => {
@@ -16,7 +16,7 @@
           // this.imgs = arr
         }
         改进
-        log () {
+        selectPic () {
           let len = this.$refs.fileList.files.length + this.imgs.length
           for (let i = this.imgs.length, c = 0; len > i; i++) {
             let r = new FileReader()
@@ -27,6 +27,7 @@
             r.readAsDataURL(this.$refs.fileList.files[c])// Base64
             c++
           }
+          this.$refs.fileList.value = null
         }
 
         删除值
