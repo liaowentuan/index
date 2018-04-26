@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page">
       <h3>强制推送</h3>
       <pre>
         git push -u origin master -f
