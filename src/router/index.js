@@ -6,6 +6,7 @@ import home from '@/components/home'
 
 import git from '@/components/git/git'
 import reset from '@/components/git/reset'
+import force from '@/components/git/force'
 
 import python from '@/components/python/python'
 import postgresql from '@/components/python/postgresql'
@@ -147,6 +148,10 @@ let routes = [
           {
             component: reset,
             path: '/home/git/reset'
+          },
+          {
+            component: force,
+            path: '/home/git/force'
           }
         ]
       },
