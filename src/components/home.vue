@@ -94,6 +94,7 @@
           <div v-if="navBar[6]">
             <ul>
               <li class="branch"><router-link to="/home/linux/tar"><span>压缩</span></router-link></li>
+              <li class="branch"><router-link to="/home/linux/map"><span>地图服务器需要的知识</span></router-link></li>
             </ul>
           </div>
         </li>

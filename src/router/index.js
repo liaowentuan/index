@@ -55,6 +55,7 @@ import deepCopy from '@/components/js/deepCopy'
 
 import linux from '@/components/linux-ubuntu/linuxUbuntu'
 import tar from '@/components/linux-ubuntu/tar'
+import map from '@/components/linux-ubuntu/mapService'
 
 /* const home = () => import('@/components/home')
 
@@ -293,6 +294,10 @@ let routes = [
           {
             component: tar,
             path: '/home/linux/tar'
+          },
+          {
+            component: map,
+            path: '/home/linux/map'
           }
         ]
       }
