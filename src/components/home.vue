@@ -52,7 +52,7 @@
         </li>
         <li class="treeLi">
           <router-link to="/home/python">
-            <b @click="jump(3)"><i class="icon-python"></i><span>python</span></b>
+            <b @click="jump(3)"><i class="icon-python icon-rotate"></i><span>python</span></b>
           </router-link>
           <div v-if="navBar[3]">
             <ul>
