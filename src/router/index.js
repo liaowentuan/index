@@ -45,6 +45,7 @@ import vueLayout from '@/components/vue/vueLayout'
 import svg from '@/components/vue/psSVG'
 import skin from '@/components/vue/skin'
 import listObj from '@/components/vue/listObject'
+import mixin from '@/components/vue/listObject'
 
 import Django from '@/components/Django/Django'
 import DjangoInstall from '@/components/Django/DjangoInstall'
@@ -139,6 +140,10 @@ let routes = [
           {
             path: '/home/vue/listObj',
             component: listObj
+          },
+          {
+            path: '/home/vue/mixin',
+            component: mixin
           }
         ]
       },

@@ -25,6 +25,7 @@
               <li class="branch"><router-link to="/home/vue/ps"><span>psSVG</span></router-link></li>
               <li class="branch"><router-link to="/home/vue/skin"><span>换肤</span></router-link></li>
               <li class="branch"><router-link to="/home/vue/listObj"><span>数组对象</span></router-link></li>
+              <li class="branch"><router-link to="/home/vue/mixin"><span>复用的数据或方法</span></router-link></li>
             </ul>
           </div>
         </li>
