@@ -56,6 +56,7 @@ import deepCopy from '@/components/js/deepCopy'
 import linux from '@/components/linux-ubuntu/linuxUbuntu'
 import tar from '@/components/linux-ubuntu/tar'
 import map from '@/components/linux-ubuntu/mapService'
+import linuxDelete from '@/components/linux-ubuntu/delete'
 
 /* const home = () => import('@/components/home')
 
@@ -298,6 +299,10 @@ let routes = [
           {
             component: map,
             path: '/home/linux/map'
+          },
+          {
+            component: linuxDelete,
+            path: '/home/linux/delete'
           }
         ]
       }
