@@ -30,6 +30,7 @@ import pythonOperator from '@/components/python/pythonBase/pythonOperator'
 import pythonCore from '@/components/python/pythonCore/pythonCore'
 import pythonFunction from '@/components/python/pythonCore/pythonFunction'
 import pythonRecursion from '@/components/python/pythonCore/pythonRecursion'
+import pythonFile from '@/components/python/pythonCore/file'
 
 import nginx from '@/components/nginx/nginx'
 import wechatHttp from '@/components/nginx/wechat_http'
@@ -45,7 +46,7 @@ import vueLayout from '@/components/vue/vueLayout'
 import svg from '@/components/vue/psSVG'
 import skin from '@/components/vue/skin'
 import listObj from '@/components/vue/listObject'
-import mixin from '@/components/vue/listObject'
+import mixin from '@/components/vue/mixin'
 
 import Django from '@/components/Django/Django'
 import DjangoInstall from '@/components/Django/DjangoInstall'
@@ -245,6 +246,10 @@ let routes = [
               {
                 component: pythonRecursion,
                 path: '/home/python/pythonCore/recursion'
+              },
+              {
+                component: pythonFile,
+                path: '/home/python/pythonCore/file'
               }
             ]
           },
