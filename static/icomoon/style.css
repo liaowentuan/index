@@ -18,11 +18,13 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
+  vertical-align: baseline;
+  display: inline-block;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 .icon-django:before {
   content: "\e900";
@@ -42,6 +44,17 @@
 .icon-ubuntu:before {
   content: "\e905";
 }
+.icon-rotate{
+  animation: rotating 2s linear infinite;
+}
 .icon-vue:before {
   content: "\e906";
+}
+@keyframes rotating {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
 }
