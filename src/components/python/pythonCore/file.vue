@@ -45,6 +45,54 @@
         f1.close()
         f2.close()
       </pre>
+      <h3>文件定位</h3>
+      <pre>
+        在读写文件的过程中，如果想知道当前的位置，可以使用tell()来获取
+        f = open("test.txt", "r")
+        str = f.read(3)
+        position = f.tell()
+        position
+        >>> 3
+
+        如果在读写文件的过程中，需要从另外一个位置进行操作的话，可以使用seek()
+        f.seek(5,0) # 光标从0位置移动到5位置
+        f.seek(-3,2) # 光标从0位置移动到倒数第三的位置
+      </pre>
+      <h3>文件重命名</h3>
+      <pre>
+        import os
+        os.rename("人生如梦.txt", "人生如梦-最终版.txt")
+      </pre>
+      <h3>文件删除</h3>
+      <pre>
+        import os
+        os.remove("人生如梦.txt")
+      </pre>
+      <h3>创建文件夹</h3>
+      <pre>
+        import os
+        os.mkdir("张三")
+      </pre>
+      <h3>获取当前目录</h3>
+      <pre>
+        import os
+        os.getcwd()
+      </pre>
+      <h3>改变默认目录</h3>
+      <pre>
+        import os
+        os.chdir("../")
+      </pre>
+      <h3>获取目录列表</h3>
+      <pre>
+        import os
+        os.listdir("./")
+      </pre>
+      <h3>删除文件夹</h3>
+      <pre>
+        import os
+        os.rmdir("张三")
+      </pre>
     </div>
 </template>
 
