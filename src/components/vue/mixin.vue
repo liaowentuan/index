@@ -5,7 +5,7 @@
       <pre>
         ﹂src
           ﹂common (创建)
-            ﹂mixin.js
+            ﹂mixin.js (创建)
 
         export const dateFrom = {
           data () {
