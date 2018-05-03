@@ -31,6 +31,7 @@ import pythonCore from '@/components/python/pythonCore/pythonCore'
 import pythonFunction from '@/components/python/pythonCore/pythonFunction'
 import pythonRecursion from '@/components/python/pythonCore/pythonRecursion'
 import pythonFile from '@/components/python/pythonCore/file'
+import pythonClass from '@/components/python/pythonCore/pythonClass'
 
 import nginx from '@/components/nginx/nginx'
 import wechatHttp from '@/components/nginx/wechat_http'
@@ -255,6 +256,10 @@ let routes = [
               {
                 component: pythonFile,
                 path: '/home/python/pythonCore/file'
+              },
+              {
+                component: pythonClass,
+                path: '/home/python/pythonCore/class'
               }
             ]
           },
