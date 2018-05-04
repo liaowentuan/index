@@ -50,6 +50,7 @@ import skin from '@/components/vue/skin'
 import listObj from '@/components/vue/listObject'
 import mixin from '@/components/vue/mixin'
 import vueDirective from '@/components/vue/vueDirective'
+import changeOtherComponent from '@/components/vue/changeOtherComponent'
 
 import Django from '@/components/Django/Django'
 import DjangoInstall from '@/components/Django/DjangoInstall'
@@ -152,6 +153,10 @@ let routes = [
           {
             path: '/home/vue/directive',
             component: vueDirective
+          },
+          {
+            path: '/home/vue/COC',
+            component: changeOtherComponent
           }
         ]
       },
