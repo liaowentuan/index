@@ -1,6 +1,3 @@
-# gatesystem
-
-> LST system
 
 ## Build Setup
 
