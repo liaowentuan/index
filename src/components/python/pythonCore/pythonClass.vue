@@ -1,5 +1,5 @@
 <template>
-    <div class="page">
+    <div>
       <h3>面向对象</h3>
       <h3>类和对象的关系</h3>
       <pre>

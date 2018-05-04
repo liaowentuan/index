@@ -1,5 +1,5 @@
 <template>
-    <div class="page">
+    <div>
       <h3>文件操作</h3>
       <h3>打开文件</h3>
       <pre>
