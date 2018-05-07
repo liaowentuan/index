@@ -65,6 +65,36 @@
 
         >>>颜色是白色;4个轮胎
       </pre>
+      <h3>__del__ 计数器为0的时候才会调用(完全没有引用)</h3>
+      <pre>
+        class Animal(object):
+          # 析构方法
+          # 当对象被删除时，会自动被调用
+          def __del__(self):
+              print("%s对象马上被干掉了..."%self.__name)
+
+        # 创建对象
+        dog = Animal("哈皮狗")
+
+        # 删除对象
+        del dog
+        >>> 哈皮狗对象马上被干掉了...
+
+        cat = Animal("波斯猫")
+        cat2 = cat
+        cat3 = cat
+
+        print("---马上 删除cat对象")
+        del cat
+        print("---马上 删除cat2对象")
+        del cat2
+        print("---马上 删除cat3对象")
+        del cat3
+        >>> ---马上 删除cat对象
+        >>> ---马上 删除cat2对象
+        >>> ---马上 删除cat3对象
+        >>> 波斯猫对象马上被干掉了...
+      </pre>
     </div>
 </template>
 
