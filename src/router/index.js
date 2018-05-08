@@ -33,6 +33,8 @@ import pythonRecursion from '@/components/python/pythonCore/pythonRecursion'
 import pythonFile from '@/components/python/pythonCore/file'
 import pythonClass from '@/components/python/pythonCore/pythonClass'
 import pythonClassFunction from '@/components/python/pythonCore/pythonClassFunction'
+import pythonSingleInheritance from '@/components/python/pythonCore/pythonSingleInheritance'
+import pythonMultiInherit from '@/components/python/pythonCore/pythonMultiInherit'
 
 import nginx from '@/components/nginx/nginx'
 import wechatHttp from '@/components/nginx/wechat_http'
@@ -270,6 +272,14 @@ let routes = [
               {
                 component: pythonClassFunction,
                 path: '/home/python/pythonCore/classFunction'
+              },
+              {
+                component: pythonSingleInheritance,
+                path: '/home/python/pythonCore/singleInheritance'
+              },
+              {
+                component: pythonMultiInherit,
+                path: '/home/python/pythonCore/pythonMultiInherit'
               }
             ]
           },

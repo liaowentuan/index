@@ -6,6 +6,8 @@
           <li><router-link to="/home/python/pythonCore/file">文件操作</router-link></li>
           <li><router-link to="/home/python/pythonCore/class">面向对象</router-link></li>
           <li><router-link to="/home/python/pythonCore/classFunction">面向对象方法</router-link></li>
+          <li><router-link to="/home/python/pythonCore/singleInheritance">对象单继承</router-link></li>
+          <li><router-link to="/home/python/pythonCore/pythonMultiInherit">对象多继承</router-link></li>
         </ul>
         <router-view/>
     </div>
