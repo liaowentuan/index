@@ -312,7 +312,6 @@ nav{
       .router-link-active{
         width: 100%;
         color:#fff;
-        text-shadow: 24px 4px 2px #f66666;
       }
       ul{
         transform-origin: 0 0;
