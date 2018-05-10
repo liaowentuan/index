@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page">
       <h3>环境搭建</h3>
       <pre>
         虚拟环境中：

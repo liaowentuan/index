@@ -76,6 +76,7 @@
             <ul>
               <li class="branch"><router-link to="/home/Django/install"><span>install</span></router-link></li>
               <li class="branch"><router-link to="/home/Django/virtualenv"><span>虚拟环境</span></router-link></li>
+              <li class="branch"><router-link to="/home/Django/init"><span>初始化环境</span></router-link></li>
             </ul>
           </div>
         </li>

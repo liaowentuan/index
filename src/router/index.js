@@ -57,6 +57,7 @@ import changeOtherComponent from '@/components/vue/changeOtherComponent'
 import Django from '@/components/Django/Django'
 import DjangoInstall from '@/components/Django/DjangoInstall'
 import DjangoVirtualenv from '@/components/Django/DjangoVirtualenv'
+import DjangoInit from '@/components/Django/init'
 
 import js from '@/components/js/js'
 import deepCopy from '@/components/js/deepCopy'
@@ -189,6 +190,10 @@ let routes = [
           {
             component: DjangoVirtualenv,
             path: '/home/Django/virtualenv'
+          },
+          {
+            component: DjangoInit,
+            path: '/home/Django/init'
           }
         ]
       },
