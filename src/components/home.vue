@@ -103,6 +103,16 @@
             </ul>
           </div>
         </li>
+        <li class="treeLi">
+          <router-link to="/home/computer">
+            <b @click="jump(7)"><i class="icon-ubuntu icon-rotate"></i><span>计算机</span></b>
+          </router-link>
+          <div v-if="navBar[7]">
+            <ul>
+              <li class="branch"><router-link to="/home/computer/bootstrapping"><span>window开机自启动</span></router-link></li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </nav>
     <main>
@@ -125,9 +135,9 @@ export default {
   },
   methods: {
     jump (index) {
-      let arr1 = [false, false, false, false, false, false, false]
+      let arr1 = [false, false, false, false, false, false, false, false]
       arr1[index] = true
-      let arr2 = [false, false, false, false, false, false, false]
+      let arr2 = [false, false, false, false, false, false, false, false]
       if (this.navBar[index] === true) {
         this.navBar = arr2
       } else {

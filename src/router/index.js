@@ -35,6 +35,7 @@ import pythonClass from '@/components/python/pythonCore/pythonClass'
 import pythonClassFunction from '@/components/python/pythonCore/pythonClassFunction'
 import pythonSingleInheritance from '@/components/python/pythonCore/pythonSingleInheritance'
 import pythonMultiInherit from '@/components/python/pythonCore/pythonMultiInherit'
+import coverParentFunc from '@/components/python/pythonCore/coverParentFunc'
 
 import nginx from '@/components/nginx/nginx'
 import wechatHttp from '@/components/nginx/wechat_http'
@@ -66,6 +67,9 @@ import linux from '@/components/linux-ubuntu/linuxUbuntu'
 import tar from '@/components/linux-ubuntu/tar'
 import map from '@/components/linux-ubuntu/mapService'
 import linuxDelete from '@/components/linux-ubuntu/delete'
+
+import computer from '@/components/computer/computer'
+import bootstrapping from '@/components/computer/bootstrapping'
 
 /* const home = () => import('@/components/home')
 
@@ -285,6 +289,10 @@ let routes = [
               {
                 component: pythonMultiInherit,
                 path: '/home/python/pythonCore/pythonMultiInherit'
+              },
+              {
+                component: coverParentFunc,
+                path: '/home/python/pythonCore/coverParentFunc'
               }
             ]
           },
@@ -348,6 +356,17 @@ let routes = [
           {
             component: linuxDelete,
             path: '/home/linux/delete'
+          }
+        ]
+      },
+      {
+        path: '/home/computer',
+        component: computer,
+        redirect: '/home/computer/bootstrapping',
+        children: [
+          {
+            component: bootstrapping,
+            path: '/home/computer/bootstrapping'
           }
         ]
       }
