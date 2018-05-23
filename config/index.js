@@ -12,14 +12,14 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: { // 跨域配置代理
       '/controller/': {
-        target: 'http://10.10.97.202',
+        target: 'http://10.10.97.999',
         changeOrigin: true,
         pathRewrite: {
           '^/controller': '/controller'
         }
       },
       '/store/': {
-        target: 'http://10.10.97.202',
+        target: 'http://10.10.97.999',
         changeOrigin: true,
         pathRewrite: {
           '^/store': '/store'

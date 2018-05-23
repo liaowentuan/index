@@ -10,7 +10,7 @@
       <b class="interButton" :class="{rotateX0: navToggle, rotateX90: !navToggle}" @click="navToggle=!navToggle; removeAside()">×</b>
       <b class="outButton" :class="{rotateX90: navToggle, rotateX0: !navToggle}"  @click="navToggle=!navToggle"><span class="fa fa-reorder"></span></b>
       <ul ref="navbar" :class="{rotateX0: navToggle, rotateX90: !navToggle}">
-        <li class="treeLi">
+        <li class="treeLi" v-if="'web superAdmin'.includes(role)">
           <router-link to="/home/vue/" append>
             <b @click="jump(0)"><i class="icon-vue"></i><span>vue-cli开发</span></b>
           </router-link>
@@ -31,7 +31,7 @@
             </ul>
           </div>
         </li>
-        <li class="treeLi">
+        <li class="treeLi" v-show="'web superAdmin'.includes(role)">
           <router-link to="/home/git">
             <b @click="jump(1)"><i class="icon-git"></i><span>git命令</span></b>
           </router-link>
@@ -42,7 +42,7 @@
             </ul>
           </div>
         </li>
-        <li class="treeLi">
+        <li class="treeLi" v-show="'web superAdmin'.includes(role)">
           <router-link to="/home/nginx">
             <b @click="jump(2)"><i class="icon-nginx"></i><span>Nginx</span></b>
           </router-link>
@@ -53,7 +53,7 @@
             </ul>
           </div>
         </li>
-        <li class="treeLi">
+        <li class="treeLi" v-if="'python superAdmin'.includes(role)">
           <router-link to="/home/python">
             <b @click="jump(3)"><i class="icon-python icon-rotate"></i><span>python</span></b>
           </router-link>
@@ -68,7 +68,7 @@
             </ul>
           </div>
         </li>
-        <li class="treeLi">
+        <li class="treeLi" v-show="'python superAdmin'.includes(role)">
           <router-link to="/home/Django">
             <b @click="jump(4)"><i class="icon-django"></i><span>Django</span></b>
           </router-link>
@@ -80,7 +80,7 @@
             </ul>
           </div>
         </li>
-        <li class="treeLi">
+        <li class="treeLi" v-show="'web superAdmin'.includes(role)">
           <router-link to="/home/js">
             <b @click="jump(5)"><i class="icon-js"></i><span>js</span></b>
           </router-link>
@@ -91,7 +91,7 @@
             </ul>
           </div>
         </li>
-        <li class="treeLi">
+        <li class="treeLi" v-show="'python superAdmin'.includes(role)">
           <router-link to="/home/linux">
             <b @click="jump(6)"><i class="icon-ubuntu icon-rotate"></i><span>linux(Ubuntu)</span></b>
           </router-link>
@@ -103,7 +103,7 @@
             </ul>
           </div>
         </li>
-        <li class="treeLi">
+        <li class="treeLi" v-show="'python superAdmin'.includes(role)">
           <router-link to="/home/computer">
             <b @click="jump(7)"><i class="icon-ubuntu icon-rotate"></i><span>计算机</span></b>
           </router-link>
@@ -130,7 +130,8 @@ export default {
       navBar: [false, false, false, false, false, false],
       aside: true,
       navToggle: true,
-      background: 'blue'
+      background: 'blue',
+      role: sessionStorage.getItem('ROLE')
     }
   },
   methods: {

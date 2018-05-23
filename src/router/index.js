@@ -439,29 +439,22 @@ const router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
-  console.log(from.meta.role)
-  debugger
-  if (!from.meta.role || to.meta.role.includes(sessionStorage.getItem('ROLE'))) {
-    if (to['redirectedFrom']) { // 防止一级路由混乱
-      let str = new RegExp(to['redirectedFrom'])
-      if (str.test(from['fullPath']) === true) {
-        next(from['fullPath'])
-      }
+  // if (to['fullPath'] === '/') {
+  //   next('/login')
+  // }
+  if (to['redirectedFrom']) { // 防止一级路由混乱
+    let str = new RegExp(to['redirectedFrom'])
+    if (str.test(from['fullPath']) === true) {
+      next(from['fullPath'])
     }
-    if (to.matched.length === 0) {
-      from.name ? next({name: from.name}) : next('login')
-    } else {
-      next()
-    }
+  }
+  if (to.matched.length === 0) {
+    from.name ? next({name: from.name}) : next('/login')
+  } else if (to.meta.role.includes(sessionStorage.getItem('ROLE'))) {
+    next()
   } else {
     next(false)
   }
-
-  // if (to.matched.some(record => record.meta.requiresAuth)) {
-  //  to.matched.some(record => record.meta.requiresAuth)
-  // } else {
-  //   next() // 确保一定要调用 next()
-  // }
 })
 
 export default router
