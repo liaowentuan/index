@@ -94,7 +94,7 @@
         </li>
         <li class="treeLi" v-show="'python superAdmin'.includes(role)">
           <router-link to="/home/linux">
-            <b @click="jump(6)"><i class="icon-ubuntu icon-rotate"></i><span>linux(Ubuntu)</span></b>
+            <b @click="jump(6)"><i class="icon-ubuntu"></i><span>linux(Ubuntu)</span></b>
           </router-link>
           <div v-if="navBar[6]">
             <ul>
@@ -106,7 +106,7 @@
         </li>
         <li class="treeLi" v-show="'python superAdmin'.includes(role)">
           <router-link to="/home/computer">
-            <b @click="jump(7)"><i class="icon-ubuntu icon-rotate"></i><span>计算机</span></b>
+            <b @click="jump(7)"><i class="icon-computer"></i><span>计算机</span></b>
           </router-link>
           <div v-if="navBar[7]">
             <ul>
