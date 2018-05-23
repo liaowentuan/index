@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import login from '@/components/login'
+import login from '@/components/login'
 
 import home from '@/components/home'
 
@@ -101,14 +101,16 @@ const deepCopy = () => import('@/components/js/deepCopy') */
 Vue.use(Router)
 
 let routes = [
-  /* {
+  {
     path: '/login',
     name: 'login',
+    meta: {role: ['superAdmin', 'web', 'python']},
     component: login
-  }, */
+  },
   {
     path: '/home',
     name: 'home',
+    meta: {role: ['superAdmin', 'web', 'python']},
     component: home,
     redirect: '/home/vue',
     children: [
@@ -116,53 +118,66 @@ let routes = [
         path: '/home/vue',
         component: vueDocs,
         redirect: '/home/vue/init',
+        meta: {role: 'web'},
         children: [
           {
             path: '/home/vue/init',
+            meta: {role: ['superAdmin', 'web']},
             component: vueInit
           },
           {
             path: '/home/vue/package',
+            meta: {role: ['superAdmin', 'web']},
             component: vuePackage
           },
           {
             path: '/home/vue/use',
+            meta: {role: ['superAdmin', 'web']},
             component: vueUse
           },
           {
             path: '/home/vue/proxy',
+            meta: {role: ['superAdmin', 'web']},
             component: vueProxy
           },
           {
             path: '/home/vue/build',
+            meta: {role: ['superAdmin', 'web']},
             component: vueBuild
           },
           {
             path: '/home/vue/layout',
+            meta: {role: ['superAdmin', 'web']},
             component: vueLayout
           },
           {
             path: '/home/vue/ps',
+            meta: {role: ['superAdmin', 'web']},
             component: svg
           },
           {
             path: '/home/vue/skin',
+            meta: {role: ['superAdmin', 'web']},
             component: skin
           },
           {
             path: '/home/vue/listObj',
+            meta: {role: ['superAdmin', 'web']},
             component: listObj
           },
           {
             path: '/home/vue/mixin',
+            meta: {role: ['superAdmin', 'web']},
             component: mixin
           },
           {
             path: '/home/vue/directive',
+            meta: {role: ['superAdmin', 'web']},
             component: vueDirective
           },
           {
             path: '/home/vue/COC',
+            meta: {role: ['superAdmin', 'web']},
             component: changeOtherComponent
           }
         ]
@@ -171,13 +186,16 @@ let routes = [
         path: '/home/git',
         component: git,
         redirect: '/home/git/reset',
+        meta: {role: ['superAdmin', 'web']},
         children: [
           {
             component: reset,
+            meta: {role: ['superAdmin', 'web']},
             path: '/home/git/reset'
           },
           {
             component: force,
+            meta: {role: ['superAdmin', 'web']},
             path: '/home/git/force'
           }
         ]
@@ -185,18 +203,22 @@ let routes = [
       {
         path: '/home/Django',
         component: Django,
+        meta: {role: ['superAdmin', 'python']},
         redirect: '/home/Django/install',
         children: [
           {
             component: DjangoInstall,
+            meta: {role: ['superAdmin', 'python']},
             path: '/home/Django/install'
           },
           {
             component: DjangoVirtualenv,
+            meta: {role: ['superAdmin', 'python']},
             path: '/home/Django/virtualenv'
           },
           {
             component: DjangoInit,
+            meta: {role: ['superAdmin', 'python']},
             path: '/home/Django/init'
           }
         ]
@@ -204,55 +226,68 @@ let routes = [
       {
         path: '/home/python',
         component: python,
+        meta: {role: ['superAdmin', 'python']},
         redirect: '/home/python/pythonbase',
         children: [
           {
             component: pythonBase,
             path: '/home/python/pythonbase',
+            meta: {role: ['superAdmin', 'python']},
             redirect: '/home/python/pythonBase/variable',
             children: [
               {
                 component: pythonVariable,
+                meta: {role: ['superAdmin', 'python']},
                 path: '/home/python/pythonBase/variable'
               },
               {
                 component: pythonType,
+                meta: {role: ['superAdmin', 'python']},
                 path: '/home/python/pythonBase/pythonType'
               },
               {
                 component: pythonFormat,
+                meta: {role: ['superAdmin', 'python']},
                 path: '/home/python/pythonBase/Format'
               },
               {
                 component: pythonConversion,
+                meta: {role: ['superAdmin', 'python']},
                 path: '/home/python/pythonBase/conversion'
               },
               {
                 component: pythonLoop,
+                meta: {role: ['superAdmin', 'python']},
                 path: '/home/python/pythonBase/loop'
               },
               {
                 component: pythonString,
+                meta: {role: ['superAdmin', 'python']},
                 path: '/home/python/pythonBase/string'
               },
               {
                 component: pythonList,
+                meta: {role: ['superAdmin', 'python']},
                 path: '/home/python/pythonBase/list'
               },
               {
                 component: pythonTuple,
+                meta: {role: ['superAdmin', 'python']},
                 path: '/home/python/pythonBase/tuple'
               },
               {
                 component: pythonDictionary,
+                meta: {role: ['superAdmin', 'python']},
                 path: '/home/python/pythonBase/dictionary'
               },
               {
                 component: pythonErgodic,
+                meta: {role: ['superAdmin', 'python']},
                 path: '/home/python/pythonBase/ergodic'
               },
               {
                 component: pythonOperator,
+                meta: {role: ['superAdmin', 'python']},
                 path: '/home/python/pythonBase/operator'
               }
             ]
@@ -260,56 +295,69 @@ let routes = [
           {
             component: pythonCore,
             path: '/home/python/pythonCore',
+            meta: {role: ['superAdmin', 'python']},
             redirect: '/home/python/pythonCore/function',
             children: [
               {
                 component: pythonFunction,
+                meta: {role: ['superAdmin', 'python']},
                 path: '/home/python/pythonCore/function'
               },
               {
                 component: pythonRecursion,
+                meta: {role: ['superAdmin', 'python']},
                 path: '/home/python/pythonCore/recursion'
               },
               {
                 component: pythonFile,
+                meta: {role: ['superAdmin', 'python']},
                 path: '/home/python/pythonCore/file'
               },
               {
                 component: pythonClass,
+                meta: {role: ['superAdmin', 'python']},
                 path: '/home/python/pythonCore/class'
               },
               {
                 component: pythonClassFunction,
+                meta: {role: ['superAdmin', 'python']},
                 path: '/home/python/pythonCore/classFunction'
               },
               {
                 component: pythonSingleInheritance,
+                meta: {role: ['superAdmin', 'python']},
                 path: '/home/python/pythonCore/singleInheritance'
               },
               {
                 component: pythonMultiInherit,
+                meta: {role: ['superAdmin', 'python']},
                 path: '/home/python/pythonCore/pythonMultiInherit'
               },
               {
                 component: coverParentFunc,
+                meta: {role: ['superAdmin', 'python']},
                 path: '/home/python/pythonCore/coverParentFunc'
               }
             ]
           },
           {
             component: postgresql,
+            meta: {role: ['superAdmin', 'python']},
             path: '/home/python/postgresql'
           },
           {
             component: postgresqlCore,
+            meta: {role: ['superAdmin', 'python']},
             path: '/home/python/postgresqlCore'
           },
           {
             component: getopt,
+            meta: {role: ['superAdmin', 'python']},
             path: '/home/python/getopt'
           },
           {
             component: pythonScript,
+            meta: {role: ['superAdmin', 'python']},
             path: '/home/python/pythonScript'
           }
         ]
@@ -317,14 +365,17 @@ let routes = [
       {
         path: '/home/nginx',
         component: nginx,
+        meta: {role: ['superAdmin', 'web']},
         redirect: '/home/nginx/http',
         children: [
           {
             component: wechatHttp,
+            meta: {role: ['superAdmin', 'web']},
             path: '/home/nginx/http'
           },
           {
             component: wechatHttps,
+            meta: {role: ['superAdmin', 'web']},
             path: '/home/nginx/wechat_https'
           }
         ]
@@ -332,10 +383,12 @@ let routes = [
       {
         path: '/home/js',
         component: js,
+        meta: {role: ['superAdmin', 'web']},
         redirect: '/home/js/deepCopy',
         children: [
           {
             component: deepCopy,
+            meta: {role: ['superAdmin', 'web']},
             path: '/home/js/deepCopy'
           }
         ]
@@ -343,18 +396,22 @@ let routes = [
       {
         path: '/home/linux',
         component: linux,
+        meta: {role: ['superAdmin', 'python']},
         redirect: '/home/linux/tar',
         children: [
           {
             component: tar,
+            meta: {role: ['superAdmin', 'python']},
             path: '/home/linux/tar'
           },
           {
             component: map,
+            meta: {role: ['superAdmin', 'python']},
             path: '/home/linux/map'
           },
           {
             component: linuxDelete,
+            meta: {role: ['superAdmin', 'python']},
             path: '/home/linux/delete'
           }
         ]
@@ -362,10 +419,12 @@ let routes = [
       {
         path: '/home/computer',
         component: computer,
+        meta: {role: ['superAdmin', 'python']},
         redirect: '/home/computer/bootstrapping',
         children: [
           {
             component: bootstrapping,
+            meta: {role: ['superAdmin', 'python']},
             path: '/home/computer/bootstrapping'
           }
         ]
@@ -380,17 +439,29 @@ const router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
-  if (to['redirectedFrom']) { // 防止一级路由混乱
-    let str = new RegExp(to['redirectedFrom'])
-    if (str.test(from['fullPath']) === true) {
-      return
+  console.log(from.meta.role)
+  debugger
+  if (!from.meta.role || to.meta.role.includes(sessionStorage.getItem('ROLE'))) {
+    if (to['redirectedFrom']) { // 防止一级路由混乱
+      let str = new RegExp(to['redirectedFrom'])
+      if (str.test(from['fullPath']) === true) {
+        next(from['fullPath'])
+      }
     }
-  }
-  if (to.matched.length === 0) {
-    from.name ? next({ name: from.name }) : next('/home')
+    if (to.matched.length === 0) {
+      from.name ? next({name: from.name}) : next('login')
+    } else {
+      next()
+    }
   } else {
-    next()
+    next(false)
   }
+
+  // if (to.matched.some(record => record.meta.requiresAuth)) {
+  //  to.matched.some(record => record.meta.requiresAuth)
+  // } else {
+  //   next() // 确保一定要调用 next()
+  // }
 })
 
 export default router

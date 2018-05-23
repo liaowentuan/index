@@ -28,18 +28,23 @@ export default {
       this.$http({
         method: 'POST',
         url: '/controller/login/user/admin',
-        // url: '/controller/hello',
         data: {
           user_name: this.user,
           u_passwd: this.upwd
         }
       }).then(function (res) {
         if (res.data.status === true) {
-          window.localStorage.setItem('user', JSON.stringify(res.data))
+          window.sessionStorage.setItem('user', JSON.stringify(res.data))
           window.location.href = '#/home'
         }
-      }).catch(function (res) {
-        console.log(res)
+      }).catch(res => {
+        if (this.user === 'web' || this.user === 'superAdmin') {
+          this.$router.push({path: '/home/vue'})
+        } else if (this.user === 'python') {
+          this.$router.push({path: '/home/python'})
+        } else {
+          alert('您的输入有误')
+        }
       })
     }
   }

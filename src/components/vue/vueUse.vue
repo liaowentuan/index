@@ -143,7 +143,7 @@
               if (to['redirectedFrom']) { // 防止一级路由混乱
                 let str = new RegExp(to['redirectedFrom'])
                 if (str.test(from['fullPath']) === true) {
-                  return
+                  next(from['fullPath'])
                 }
               }
               if (to.matched.length === 0) { // 错误返回
