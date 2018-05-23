@@ -50,7 +50,8 @@ export default {
         } else {
           this.$notify({
             title: '提示',
-            message: '您的输入有误, 请用 "web", "python", "superAdmin" 三个账号, 密码随意填写'
+            message: '您的输入有误, 请用 "web", "python", "superAdmin" 三个账号, 密码随意填写',
+            type: 'warning'
           })
         }
       })
