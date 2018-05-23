@@ -54,6 +54,7 @@ import listObj from '@/components/vue/listObject'
 import mixin from '@/components/vue/mixin'
 import vueDirective from '@/components/vue/vueDirective'
 import changeOtherComponent from '@/components/vue/changeOtherComponent'
+import vueAuthority from '@/components/vue/vueAuthority'
 
 import Django from '@/components/Django/Django'
 import DjangoInstall from '@/components/Django/DjangoInstall'
@@ -179,6 +180,11 @@ let routes = [
             path: '/home/vue/COC',
             meta: {role: ['superAdmin', 'web']},
             component: changeOtherComponent
+          },
+          {
+            component: vueAuthority,
+            path: '/home/vue/vueAuthority',
+            meta: {role: ['superAdmin', 'web']}
           }
         ]
       },

@@ -28,6 +28,7 @@
               <li class="branch"><router-link to="/home/vue/mixin"><span>复用的数据或方法</span></router-link></li>
               <li class="branch"><router-link to="/home/vue/directive"><span>自定义指令(drag)</span></router-link></li>
               <li class="branch"><router-link to="/home/vue/COC"><span>干涉他人组件</span></router-link></li>
+              <li class="branch"><router-link to="/home/vue/vueAuthority"><span>简单的权限控制</span></router-link></li>
             </ul>
           </div>
         </li>

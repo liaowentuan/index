@@ -1,7 +1,8 @@
 <template>
-    <div>
+    <div class="page">
       <h3>权限控制/token的添加（安全系数高一点）</h3>
       <pre>
+        ﹂main.js
         // 添加请求拦截器
         axios.interceptors.request.use(function (config) {
           // 在发送请求之前做些什么
