@@ -55,6 +55,7 @@ import mixin from '@/components/vue/mixin'
 import vueDirective from '@/components/vue/vueDirective'
 import changeOtherComponent from '@/components/vue/changeOtherComponent'
 import vueAuthority from '@/components/vue/vueAuthority'
+import vuebaiduMap from '@/components/vue/baiduMap'
 
 import Django from '@/components/Django/Django'
 import DjangoInstall from '@/components/Django/DjangoInstall'
@@ -184,6 +185,11 @@ let routes = [
           {
             component: vueAuthority,
             path: '/home/vue/vueAuthority',
+            meta: {role: ['superAdmin', 'web']}
+          },
+          {
+            component: vuebaiduMap,
+            path: '/home/vue/baiduMap',
             meta: {role: ['superAdmin', 'web']}
           }
         ]

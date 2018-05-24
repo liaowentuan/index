@@ -7,8 +7,13 @@
 <script>
 export default {
   name: 'App',
-  beforeMount () {
-    sessionStorage.setItem('ROLE', 'web')
+  mounted () {
+    this.$nextTick(_ => {
+      sessionStorage.setItem('ROLE', 'web')
+      this.$router.push({
+        path: '/login'
+      })
+    })
   }
 }
 </script>
