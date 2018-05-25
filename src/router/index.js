@@ -450,22 +450,28 @@ const router = new Router({
   routes: routes
 })
 
-router.beforeEach((to, from, next) => {
-  // if (to['fullPath'] === '/') {
-  //   next('/login')
-  // }
-  if (to['redirectedFrom']) { // 防止一级路由混乱
-    let str = new RegExp(to['redirectedFrom'])
-    if (str.test(from['fullPath']) === true) {
-      next(from['fullPath'])
+router.beforeEach((to, from, next) => { // 有权限权限
+  if (sessionStorage.getItem('ROLE')) {
+    if (to.matched.length === 0) { // 地址栏是 '/'
+      from.name ? next({name: from.name}) : next('/login')
     }
-  }
-  if (to.matched.length === 0) {
-    from.name ? next({name: from.name}) : next('/login')
-  } else if (to.meta.role.includes(sessionStorage.getItem('ROLE'))) {
-    next()
-  } else {
-    next(false)
+    if (to['redirectedFrom']) { // 防止一级路由混乱
+      let str = new RegExp(to['redirectedFrom'])
+      if (str.test(from['fullPath']) === true) {
+        return false
+      }
+    }
+    if (to.meta.role.includes(sessionStorage.getItem('ROLE'))) { // 权限判断
+      next()
+    } else {
+      next(false)
+    }
+  } else { // 无权限
+    if (to.matched.length === 0) {
+      from.name ? next({name: from.name}) : next('/login')
+    } else {
+      next()
+    }
   }
 })
 
