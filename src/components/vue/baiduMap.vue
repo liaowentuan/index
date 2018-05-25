@@ -3,7 +3,7 @@
       <h3>使用百度在线地图2.0 (异步加载)</h3>
       <pre>
         Vue.prototype.createMap = (callback) => { // 创建地图需要执行回调
-        if (typeof (callback) !== 'function') { this.$message('请传入一个回调函数') }
+          if (typeof (callback) !== 'function') { this.$message('请传入一个回调函数') }
           if (!window.BMap) {
             let MP = _ => {
               return new Promise(function (resolve, reject) {
@@ -19,17 +19,15 @@
             }
             MP().then(BMap => {
               window.BMap = BMap
-              return callback()
             })
           }
-          callback()
-        }
-
-        组件里面调用
-        mounted () {
-          this.$nextTick(_ => {
-            this.createMap(this.Map) // this.Map 是你想要执行的逻辑
-          })
+          if (!window.BMap) {
+            setTimeout(_ => {
+              callback() // 地图API
+            }, 1000)
+          } else {
+            callback() // 地图API
+          }
         }
       </pre>
     </div>
