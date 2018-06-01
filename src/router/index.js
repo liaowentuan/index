@@ -8,6 +8,9 @@ import git from '@/components/git/git'
 import reset from '@/components/git/reset'
 import force from '@/components/git/forcePush'
 
+import interview from '@/components/interview/interview'
+import first from '@/components/interview/first'
+
 import python from '@/components/python/python'
 import postgresql from '@/components/python/postgresql'
 import postgresqlCore from '@/components/python/postgresqlCore'
@@ -209,6 +212,19 @@ let routes = [
             component: force,
             meta: {role: ['superAdmin', 'web']},
             path: '/home/git/force'
+          }
+        ]
+      },
+      {
+        path: '/home/interview',
+        component: interview,
+        redirect: '/home/interview/first',
+        meta: {role: ['superAdmin', 'web']},
+        children: [
+          {
+            component: first,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/interview/first'
           }
         ]
       },
