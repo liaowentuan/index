@@ -19,5 +19,6 @@ from baiduMap import views as map_views  # new
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url('', map_views.index),  # new
+    url('index', map_views.index),  # new
+    url('^controller/add$', map_views.add),  # get
 ]

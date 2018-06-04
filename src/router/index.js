@@ -64,6 +64,7 @@ import Django from '@/components/Django/Django'
 import DjangoInstall from '@/components/Django/DjangoInstall'
 import DjangoVirtualenv from '@/components/Django/DjangoVirtualenv'
 import DjangoInit from '@/components/Django/init'
+import DjangoStatic from '@/components/Django/DjangoStatic'
 
 import js from '@/components/js/js'
 import deepCopy from '@/components/js/deepCopy'
@@ -248,6 +249,11 @@ let routes = [
             component: DjangoInit,
             meta: {role: ['superAdmin', 'python']},
             path: '/home/Django/init'
+          },
+          {
+            component: DjangoStatic,
+            meta: {role: ['superAdmin', 'python']},
+            path: '/home/Django/static'
           }
         ]
       },

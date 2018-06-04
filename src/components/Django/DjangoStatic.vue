@@ -1,9 +1,10 @@
 <template>
-    <div>
+    <div class="page">
       <h3>引入静态文件1.11.12</h3>
       <!--eslint-disable-->
       <pre>
         html:
+          {% load staticfiles %}
           < link rel="stylesheet" href="{% static 'css/home.css' %}" >
           < script src="{% static 'js/home.js' %}">< /script >
 
