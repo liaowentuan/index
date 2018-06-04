@@ -9,6 +9,30 @@
 </head>
 <body>
   {% include './temp/nav.tpl' %}
-  this is home page
+  <p>this is home page</p>
+  <h3>GET</h3>
+  <form action="/controller/add" method="GET">
+    a: <input type="number" name="a"><br>
+    b: <input type="number" name="b"><br>
+    <input type="submit" value="提交">
+  </form>
+  <h3>POST</h3>
+  <form action="/controller/add" method="POST">
+    a: <input type="number" name="a"><br>
+    b: <input type="number" name="b"><br>
+    <input type="submit" value="提交">
+  </form>
+  <h3>DELETE</h3>
+  <form action="/controller/add" method="DELETE">
+    a: <input type="number" name="a"><br>
+    b: <input type="number" name="b"><br>
+    <input type="submit" value="提交">
+  </form>
+  <h3>PUT</h3>
+  <form action="/controller/add" method="PUT">
+    a: <input type="number" name="a"><br>
+    b: <input type="number" name="b"><br>
+    <input type="submit" value="提交">
+  </form>
 </body>
 </html>

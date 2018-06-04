@@ -12,13 +12,34 @@
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 
 def index(request):
     return render(request, 'home.html')
 
+@csrf_exempt
 def add(request):
-    a = request.GET['a']
-    b = request.GET['b']
-    a = int(a)
-    b = int(b)
-    return HttpResponse(str(a+b))
+    if request.method == 'GET':
+      a = request.GET.get('a', None)
+      b = request.GET.get('b', None)
+      a = int(a)
+      b = int(b)
+      return HttpResponse(str('''get : a + b = %d, (%s)''' % (a + b, request.method)))
+    elif request.method == 'POST':
+      a = request.POST.get('a', None)
+      b = request.POST.get('b', None)
+      a = int(a)
+      b = int(b)
+      return HttpResponse(str('''post : a + b = %d, (%s)''' % (a + b, request.method)))
+    elif request.method == 'DELETE':
+      a = request.DELETE.get('a', None)
+      b = request.DELETE.get('b', None)
+      a = int(a)
+      b = int(b)
+      return HttpResponse(str('''delete : a + b = %d, (%s)''' % (a + b, request.method)))
+    elif request.method == 'PUT':
+      a = request.PUT.get('a', None)
+      b = request.PUT.get('b', None)
+      a = int(a)
+      b = int(b)
+      return HttpResponse(str('''put : a + b = %d, (%s)''' % (a + b, request.method)))
