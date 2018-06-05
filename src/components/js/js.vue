@@ -6,12 +6,7 @@
 
 <script>
 export default {
-  name: 'js.vue',
-  data () {
-    return {
-      msg: 'this is js.vue'
-    }
-  }
+  name: 'javascript'
 }
 </script>
 

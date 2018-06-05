@@ -170,7 +170,7 @@ export default {
 
 <style scoped lang="less">
 /* PC */
-@media screen and (min-width:1024px){
+/*@media screen and (min-width:1024px){*/
   main{
     margin: 85px 0 0 260px;
   }
@@ -286,9 +286,9 @@ nav{
         display: none;
       }
   }
-}
+/*}*/
 /* mobile */
-@media screen and (max-width:1024px){
+/*@media screen and (max-width:1024px){
 
   .container{
     transition: all 0.3s ease-in-out;
@@ -419,7 +419,7 @@ nav{
     border-bottom: 34px solid #fff;
     transition: all 0.3s ease-in-out;
   }
-}
+}*/
 @keyframes show {
   0%{
     margin-top: -20px;
