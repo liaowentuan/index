@@ -47,7 +47,7 @@ a{
     }
   }
 }
-@media screen and (max-width:1024px){
+ @media screen and (max-width:1024px){
   html{
     pre,p{
       word-wrap:break-word;
