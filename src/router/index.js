@@ -7,6 +7,7 @@ import home from '@/components/home'
 import git from '@/components/git/git'
 import reset from '@/components/git/reset'
 import force from '@/components/git/forcePush'
+import forceOneFile from '@/components/git/forceOneFile'
 
 import interview from '@/components/interview/interview'
 import first from '@/components/interview/first'
@@ -213,6 +214,11 @@ let routes = [
             component: force,
             meta: {role: ['superAdmin', 'web']},
             path: '/home/git/force'
+          },
+          {
+            component: forceOneFile,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/git/forceOneFile'
           }
         ]
       },

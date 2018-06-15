@@ -41,6 +41,7 @@
             <ul>
               <li class="branch"><router-link to="/home/git/reset"><span>reset 版本回退</span></router-link></li>
               <li class="branch"><router-link to="/home/git/force"><span>强制推送</span></router-link></li>
+              <li class="branch"><router-link to="/home/git/forceOneFile"><span>取消add的内容</span></router-link></li>
             </ul>
           </div>
         </li>
