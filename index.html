@@ -13,4 +13,16 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+  <script>
+    var hiddenProperty = 'hidden' in document ? 'hidden' : 'webkitHidden' in document ? 'webkitHidden' : 'mozHidden' in document ? 'mozHidden' : null;
+    var visibilityChangeEvent = hiddenProperty.replace(/hidden/i, 'visibilitychange');
+    var onVisibilityChange = function(){
+        if (!document[hiddenProperty]) {
+          document.title = '文团的技术文档'
+      }else{
+          document.title = '欢迎下次再来'
+      }
+    }
+    document.addEventListener(visibilityChangeEvent, onVisibilityChange);
+  </script>
 </html>
