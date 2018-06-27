@@ -118,6 +118,18 @@
             </ul>
           </div>
         </li>
+        <li class="treeLi" v-show="'web superAdmin'.includes(role)">
+          <router-link to="/home/interview">
+            <b @click="jump(8)"><i class="icon-computer"></i><span>面试题</span></b>
+          </router-link>
+          <div v-if="navBar[8]">
+            <ul>
+              <li class="branch"><router-link to="/home/interview/first"><span>第一题</span></router-link></li>
+              <li class="branch"><router-link to="/home/interview/second"><span>第二题</span></router-link></li>
+              <li class="branch"><router-link to="/home/interview/third"><span>第三题</span></router-link></li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </nav>
     <main>
@@ -132,7 +144,7 @@ export default {
   name: 'home',
   data () {
     return {
-      navBar: [false, false, false, false, false, false],
+      navBar: [false, false, false, false, false, false, false, false, false],
       aside: true,
       navToggle: true,
       background: 'blue',
@@ -141,9 +153,9 @@ export default {
   },
   methods: {
     jump (index) {
-      let arr1 = [false, false, false, false, false, false, false, false]
+      let arr1 = [false, false, false, false, false, false, false, false, false]
       arr1[index] = true
-      let arr2 = [false, false, false, false, false, false, false, false]
+      let arr2 = [false, false, false, false, false, false, false, false, false]
       if (this.navBar[index] === true) {
         this.navBar = arr2
       } else {
