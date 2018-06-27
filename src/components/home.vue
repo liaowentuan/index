@@ -130,6 +130,11 @@
               <li class="branch"><router-link to="/home/interview/fourth"><span>第四题</span></router-link></li>
               <li class="branch"><router-link to="/home/interview/fifth"><span>第五题</span></router-link></li>
               <li class="branch"><router-link to="/home/interview/sixth"><span>第六题</span></router-link></li>
+              <li class="branch"><router-link to="/home/interview/seventh"><span>第七题</span></router-link></li>
+              <li class="branch"><router-link to="/home/interview/eighth"><span>第八题</span></router-link></li>
+              <li class="branch"><router-link to="/home/interview/ninth"><span>第九题</span></router-link></li>
+              <li class="branch"><router-link to="/home/interview/tenth"><span>第十题</span></router-link></li>
+              <li class="branch"><router-link to="/home/interview/eleventh"><span>第十一题</span></router-link></li>
             </ul>
           </div>
         </li>
