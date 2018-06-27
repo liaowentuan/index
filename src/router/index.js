@@ -14,6 +14,9 @@ import interview from '@/components/interview/interview'
 import first from '@/components/interview/first'
 import second from '@/components/interview/second'
 import third from '@/components/interview/third'
+import fourth from '@/components/interview/fourth'
+import fifth from '@/components/interview/fifth'
+import sixth from '@/components/interview/sixth'
 
 import python from '@/components/python/python'
 import postgresql from '@/components/python/postgresql'
@@ -250,6 +253,21 @@ let routes = [
             component: third,
             meta: {role: ['superAdmin', 'web']},
             path: '/home/interview/third'
+          },
+          {
+            component: fourth,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/interview/fourth'
+          },
+          {
+            component: fifth,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/interview/fifth'
+          },
+          {
+            component: sixth,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/interview/sixth'
           }
         ]
       },

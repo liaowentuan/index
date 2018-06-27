@@ -127,6 +127,9 @@
               <li class="branch"><router-link to="/home/interview/first"><span>第一题</span></router-link></li>
               <li class="branch"><router-link to="/home/interview/second"><span>第二题</span></router-link></li>
               <li class="branch"><router-link to="/home/interview/third"><span>第三题</span></router-link></li>
+              <li class="branch"><router-link to="/home/interview/fourth"><span>第四题</span></router-link></li>
+              <li class="branch"><router-link to="/home/interview/fifth"><span>第五题</span></router-link></li>
+              <li class="branch"><router-link to="/home/interview/sixth"><span>第六题</span></router-link></li>
             </ul>
           </div>
         </li>
