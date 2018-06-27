@@ -12,6 +12,13 @@
 
       因为： console.log(a)
       >>> {[object Object]: 456}
+
+      拓展 var d = null
+      a[d] = 789
+      >>> a{
+        null: 789,
+        [object Object]: 456
+      }
     </pre>
   </div>
 </template>
