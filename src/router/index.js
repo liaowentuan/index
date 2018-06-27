@@ -12,6 +12,16 @@ import gitignore from '@/components/git/gitignore'
 
 import interview from '@/components/interview/interview'
 import first from '@/components/interview/first'
+import second from '@/components/interview/second'
+import third from '@/components/interview/third'
+import fourth from '@/components/interview/fourth'
+import fifth from '@/components/interview/fifth'
+import sixth from '@/components/interview/sixth'
+import seventh from '@/components/interview/seventh'
+import eighth from '@/components/interview/eighth'
+import ninth from '@/components/interview/ninth'
+import tenth from '@/components/interview/tenth'
+import eleventh from '@/components/interview/eleventh'
 
 import python from '@/components/python/python'
 import postgresql from '@/components/python/postgresql'
@@ -238,6 +248,56 @@ let routes = [
             component: first,
             meta: {role: ['superAdmin', 'web']},
             path: '/home/interview/first'
+          },
+          {
+            component: second,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/interview/second'
+          },
+          {
+            component: third,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/interview/third'
+          },
+          {
+            component: fourth,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/interview/fourth'
+          },
+          {
+            component: fifth,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/interview/fifth'
+          },
+          {
+            component: sixth,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/interview/sixth'
+          },
+          {
+            component: seventh,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/interview/seventh'
+          },
+          {
+            component: eighth,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/interview/eighth'
+          },
+          {
+            component: ninth,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/interview/ninth'
+          },
+          {
+            component: tenth,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/interview/tenth'
+          },
+          {
+            component: eleventh,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/interview/eleventh'
           }
         ]
       },

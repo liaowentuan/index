@@ -6,6 +6,8 @@
         >>> undefined
         typeof(bar)
         >>> "object"
+
+        null 的类型是Object
       </pre>
     </div>
 </template>
