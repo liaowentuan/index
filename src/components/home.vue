@@ -30,6 +30,7 @@
               <li class="branch"><router-link to="/home/vue/COC"><span>干涉他人组件</span></router-link></li>
               <li class="branch"><router-link to="/home/vue/vueAuthority"><span>简单的权限控制</span></router-link></li>
               <li class="branch"><router-link to="/home/vue/baiduMap"><span>按需加载的百度地图</span></router-link></li>
+              <li class="branch"><router-link to="/home/vue/vueWatch"><span>watch</span></router-link></li>
             </ul>
           </div>
         </li>
@@ -192,7 +193,7 @@ export default {
 
 <style scoped lang="less">
 /* PC */
-/*@media screen and (min-width:1024px){*/
+@media screen and (min-width:1024px){
   main{
     margin: 85px 0 0 260px;
   }
@@ -308,9 +309,9 @@ nav{
         display: none;
       }
   }
-/*}*/
+}
 /* mobile */
-/*@media screen and (max-width:1024px){
+@media screen and (max-width:1024px){
 
   .container{
     transition: all 0.3s ease-in-out;
@@ -441,7 +442,7 @@ nav{
     border-bottom: 34px solid #fff;
     transition: all 0.3s ease-in-out;
   }
-}*/
+}
 @keyframes show {
   0%{
     margin-top: -20px;

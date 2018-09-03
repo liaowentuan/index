@@ -32,7 +32,7 @@ ul{
 a{
   text-decoration: none;
 }
-/*@media screen and (min-width:1024px){*/
+@media screen and (min-width:1024px){
   .page{
   background: #fff;
   margin-top: 10px;
@@ -46,8 +46,8 @@ a{
       white-space:pre-wrap;
     }
   }
-/*}*/
-/* @media screen and (max-width:1024px){
+}
+ @media screen and (max-width:1024px){
   html{
     pre,p{
       word-wrap:break-word;
@@ -71,5 +71,5 @@ a{
       }
     }
   }
-}*/
+}
 </style>
