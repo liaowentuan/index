@@ -71,6 +71,7 @@ import vueDirective from '@/components/vue/vueDirective'
 import changeOtherComponent from '@/components/vue/changeOtherComponent'
 import vueAuthority from '@/components/vue/vueAuthority'
 import vuebaiduMap from '@/components/vue/baiduMap'
+import vueWatch from '@/components/vue/vueWatch'
 
 import Django from '@/components/Django/Django'
 import DjangoInstall from '@/components/Django/DjangoInstall'
@@ -206,6 +207,11 @@ let routes = [
           {
             component: vuebaiduMap,
             path: '/home/vue/baiduMap',
+            meta: {role: ['superAdmin', 'web']}
+          },
+          {
+            component: vueWatch,
+            path: '/home/vue/vueWatch',
             meta: {role: ['superAdmin', 'web']}
           }
         ]
