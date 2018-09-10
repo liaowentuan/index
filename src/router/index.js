@@ -9,6 +9,7 @@ import reset from '@/components/git/reset'
 import force from '@/components/git/forcePush'
 import forceOneFile from '@/components/git/forceOneFile'
 import gitignore from '@/components/git/gitignore'
+import checkoutOrigin from '@/components/git/checkout'
 
 import interview from '@/components/interview/interview'
 import first from '@/components/interview/first'
@@ -241,6 +242,11 @@ let routes = [
             component: gitignore,
             meta: {role: ['superAdmin', 'web']},
             path: '/home/git/gitignore'
+          },
+          {
+            component: checkoutOrigin,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/git/checkoutOrigin'
           }
         ]
       },
