@@ -141,6 +141,16 @@
             </ul>
           </div>
         </li>
+        <li class="treeLi" v-show="'web superAdmin'.includes(role)">
+          <router-link to="/home/element-ui">
+            <b @click="jump(9)"><i class="icon-computer"></i><span>element-ui</span></b>
+          </router-link>
+          <div v-if="navBar[9]">
+            <ul>
+              <li class="branch"><router-link to="/home/element-ui/tree"><span>tree控件</span></router-link></li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </nav>
     <main>
@@ -155,7 +165,7 @@ export default {
   name: 'home',
   data () {
     return {
-      navBar: [false, false, false, false, false, false, false, false, false],
+      navBar: [false, false, false, false, false, false, false, false, false, false],
       aside: true,
       navToggle: true,
       background: 'blue',
@@ -164,9 +174,9 @@ export default {
   },
   methods: {
     jump (index) {
-      let arr1 = [false, false, false, false, false, false, false, false, false]
+      let arr1 = [false, false, false, false, false, false, false, false, false, false]
       arr1[index] = true
-      let arr2 = [false, false, false, false, false, false, false, false, false]
+      let arr2 = [false, false, false, false, false, false, false, false, false, false]
       if (this.navBar[index] === true) {
         this.navBar = arr2
       } else {

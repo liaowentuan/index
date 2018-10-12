@@ -92,6 +92,9 @@ import linuxDelete from '@/components/linux-ubuntu/delete'
 import computer from '@/components/computer/computer'
 import bootstrapping from '@/components/computer/bootstrapping'
 
+import elementStudyBox from '@/components/element-ui/elementStudyBox'
+import elTree from '@/components/element-ui/tree'
+
 /* const home = () => import('@/components/home')
 
 const git = () => import('@/components/git/git')
@@ -550,6 +553,19 @@ let routes = [
             component: bootstrapping,
             meta: {role: ['superAdmin', 'python']},
             path: '/home/computer/bootstrapping'
+          }
+        ]
+      },
+      { // elementStudyBox
+        path: '/home/element-ui',
+        component: elementStudyBox,
+        meta: {role: ['superAdmin', 'web']},
+        redirect: '/home/element-ui/tree',
+        children: [
+          {
+            component: elTree,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/element-ui/tree'
           }
         ]
       }
