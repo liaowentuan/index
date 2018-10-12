@@ -65,7 +65,8 @@ module.exports = {
     // Pathsxian
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './', // Hbuilder 要用这种样式
+    // assetsPublicPath: '/',
 
     /**
      * Source Maps

@@ -45,6 +45,7 @@
               <li class="branch"><router-link to="/home/git/forceOneFile"><span>取消add的内容</span></router-link></li>
               <li class="branch"><router-link to="/home/git/gitignore"><span>.gitignore</span></router-link></li>
               <li class="branch"><router-link to="/home/git/checkoutOrigin"><span>拉取远程到本地</span></router-link></li>
+              <li class="branch"><router-link to="/home/git/cancal"><span>恢复某个文件成修改前</span></router-link></li>
             </ul>
           </div>
         </li>

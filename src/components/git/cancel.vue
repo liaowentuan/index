@@ -1,15 +1,15 @@
 <template>
     <div class="page">
-      <h3>拉取远程分支到本地</h3>
+      <h3>恢复某个文件成修改前的样子</h3>
       <pre>
-        git checkout -b 分支名 origin/分支名
+        git checkout -- 文件名
       </pre>
     </div>
 </template>
 
 <script>
 export default {
-  name: 'checkout-origin'
+  name: 'calcel'
 }
 </script>
 
