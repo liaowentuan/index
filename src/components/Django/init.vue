@@ -67,6 +67,17 @@
             settings.py
         修改：
         ALLOWED_HOSTS = ['*']
+        和
+        INSTALLED_APPS = (
+            'django.contrib.admin',
+            'django.contrib.auth',
+            'django.contrib.contenttypes',
+            'django.contrib.sessions',
+            'django.contrib.messages',
+            'django.contrib.staticfiles',
+            'baiduMap',
+        )
+        完成后：
         >>> python manage.py runserver 0.0.0.0:8000
       </pre>
     </div>
