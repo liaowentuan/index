@@ -85,6 +85,7 @@
               <li class="branch"><router-link to="/home/Django/virtualenv"><span>虚拟环境</span></router-link></li>
               <li class="branch"><router-link to="/home/Django/init"><span>初始化环境</span></router-link></li>
               <li class="branch"><router-link to="/home/Django/static"><span>css/js/tpl引入</span></router-link></li>
+              <li class="branch"><router-link to="/home/Django/request"><span>四种请求</span></router-link></li>
             </ul>
           </div>
         </li>

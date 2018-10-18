@@ -31,7 +31,10 @@ axios.interceptors.response.use(function (response) {
   // 对响应错误做点什么
   return Promise.reject(error)
 })
+
 Vue.prototype.echarts = echarts
+
+axios.defaults.baseURL = 'http://www.baidu.com/'
 Vue.prototype.$http = axios
 Vue.use(ElementUI)
 

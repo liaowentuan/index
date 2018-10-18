@@ -66,7 +66,7 @@
           ﹂mapService
             settings.py
         修改：
-        ALLOWED_HOSTS = ['*']
+        ALLOWED_HOSTS = ['*'] # 允许ip访问
         和
         INSTALLED_APPS = (
             'django.contrib.admin',
@@ -75,7 +75,7 @@
             'django.contrib.sessions',
             'django.contrib.messages',
             'django.contrib.staticfiles',
-            'baiduMap',
+            'baiduMap', # python manage.py startapp baiduMap 应用名称 是baiduMap
         )
         完成后：
         >>> python manage.py runserver 0.0.0.0:8000

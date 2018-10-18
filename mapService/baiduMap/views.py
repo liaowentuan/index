@@ -12,6 +12,7 @@
 
 from django.shortcuts import render
 from django.http import HttpResponse
+# Django中对于基于函数的视图我们可以 @csrf_exempt 注解来标识一个视图可以被跨域访问
 from django.views.decorators.csrf import csrf_exempt
 
 def index(request):
