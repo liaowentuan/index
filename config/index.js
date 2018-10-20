@@ -11,11 +11,11 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: { // 跨域配置代理
-      '/controller/': {
-        target: 'http://10.10.97.999',
+      '/add/': {
+        target: 'http://127.0.0.1:3000',
         changeOrigin: true,
         pathRewrite: {
-          '^/controller': '/controller'
+          '^/add': '/add'
         }
       },
       '/store/': {

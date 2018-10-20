@@ -54,6 +54,11 @@
             url('^controller/add$', map_views.add),  # get
         ]
       </pre>
+      <el-button @click="requestget">get</el-button>
+      <el-button @click="requestpost">post</el-button>
+      <el-button @click="requestdelete">delete</el-button>
+      <el-button @click="requestput">put</el-button>
+      <el-button @click="login">login</el-button>
     </div>
 </template>
 
@@ -63,6 +68,72 @@ export default {
   data () {
     return {
       msg: 'this is init'
+    }
+  },
+  methods: {
+    login () {
+      let obj = new FormData()
+      obj.append('userName', 'cong')
+      obj.append('password', 123456)
+      this.$http({
+        // withCredentials: true,
+        // headers: {
+        //   'Content-Type': 'application/x-www-form-urlencoded'
+        // },
+        method: 'POST',
+        url: 'http://172.18.0.154:8083/login/login',
+        data: obj
+      }).then(res => {
+        console.log(res)
+      })
+    },
+    requestget (method) {
+      this.$http({
+        method: 'GET',
+        url: 'add/'
+      }).then(res => {
+        console.log(res)
+      })
+    },
+    requestpost (method) {
+      let obj = {
+        userName: 'cong',
+        password: 123456
+      }
+      // let obj = new FormData()
+      // obj.append('userName', 'cong')
+      // obj.append('password', 123456)
+      this.$http({
+        method: 'POST',
+        url: 'add/',
+        data: this.$qs.stringify(obj)
+      }).then(res => {
+        console.log(res)
+      })
+    },
+    requestdelete (method) {
+      this.$http({
+        method: 'DELETE',
+        url: 'add/'
+      }).then(res => {
+        console.log(res)
+      })
+    },
+    requestput (method) {
+      let obj = {
+        userName: 'cong',
+        password: 123456
+      }
+      // let obj = new FormData()
+      // obj.append('userName', 'cong')
+      // obj.append('password', 123456)
+      this.$http({
+        method: 'put',
+        url: 'add/',
+        data: this.$qs.stringify(obj)
+      }).then(res => {
+        console.log(res)
+      })
     }
   }
 }

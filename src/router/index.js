@@ -81,6 +81,7 @@ import DjangoVirtualenv from '@/components/Django/DjangoVirtualenv'
 import DjangoInit from '@/components/Django/init'
 import DjangoStatic from '@/components/Django/DjangoStatic'
 import DjangoRequest from '@/components/Django/DjangoRequest'
+import Djangopgsql from '@/components/Django/pgsql'
 
 import js from '@/components/js/js'
 import deepCopy from '@/components/js/deepCopy'
@@ -353,6 +354,11 @@ let routes = [
             component: DjangoRequest,
             meta: {role: ['superAdmin', 'python']},
             path: '/home/Django/request'
+          },
+          {
+            component: Djangopgsql,
+            meta: {role: ['superAdmin', 'python']},
+            path: '/home/Django/pgsql'
           }
         ]
       },
