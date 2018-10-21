@@ -9,6 +9,8 @@ import reset from '@/components/git/reset'
 import force from '@/components/git/forcePush'
 import forceOneFile from '@/components/git/forceOneFile'
 import gitignore from '@/components/git/gitignore'
+import checkoutOrigin from '@/components/git/checkout'
+import gitCancal from '@/components/git/cancel'
 
 import interview from '@/components/interview/interview'
 import first from '@/components/interview/first'
@@ -78,6 +80,8 @@ import DjangoInstall from '@/components/Django/DjangoInstall'
 import DjangoVirtualenv from '@/components/Django/DjangoVirtualenv'
 import DjangoInit from '@/components/Django/init'
 import DjangoStatic from '@/components/Django/DjangoStatic'
+import DjangoRequest from '@/components/Django/DjangoRequest'
+import Djangopgsql from '@/components/Django/pgsql'
 
 import js from '@/components/js/js'
 import deepCopy from '@/components/js/deepCopy'
@@ -89,6 +93,9 @@ import linuxDelete from '@/components/linux-ubuntu/delete'
 
 import computer from '@/components/computer/computer'
 import bootstrapping from '@/components/computer/bootstrapping'
+
+import elementStudyBox from '@/components/element-ui/elementStudyBox'
+import elTree from '@/components/element-ui/tree'
 
 /* const home = () => import('@/components/home')
 
@@ -241,6 +248,16 @@ let routes = [
             component: gitignore,
             meta: {role: ['superAdmin', 'web']},
             path: '/home/git/gitignore'
+          },
+          {
+            component: checkoutOrigin,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/git/checkoutOrigin'
+          },
+          { // gitCancal
+            component: gitCancal,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/git/cancal'
           }
         ]
       },
@@ -332,6 +349,16 @@ let routes = [
             component: DjangoStatic,
             meta: {role: ['superAdmin', 'python']},
             path: '/home/Django/static'
+          },
+          {
+            component: DjangoRequest,
+            meta: {role: ['superAdmin', 'python']},
+            path: '/home/Django/request'
+          },
+          {
+            component: Djangopgsql,
+            meta: {role: ['superAdmin', 'python']},
+            path: '/home/Django/pgsql'
           }
         ]
       },
@@ -538,6 +565,19 @@ let routes = [
             component: bootstrapping,
             meta: {role: ['superAdmin', 'python']},
             path: '/home/computer/bootstrapping'
+          }
+        ]
+      },
+      { // elementStudyBox
+        path: '/home/element-ui',
+        component: elementStudyBox,
+        meta: {role: ['superAdmin', 'web']},
+        redirect: '/home/element-ui/tree',
+        children: [
+          {
+            component: elTree,
+            meta: {role: ['superAdmin', 'web']},
+            path: '/home/element-ui/tree'
           }
         ]
       }

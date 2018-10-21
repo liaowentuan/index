@@ -11,12 +11,12 @@ import echarts from 'echarts'
 import 'font-awesome/css/font-awesome.min.css'
 import '../static/icomoon/style.css'
 import './common/normalize.css'
+import qs from 'qs'
 
 // 添加请求拦截器
 axios.interceptors.request.use(function (config) {
   // 在发送请求之前做些什么
-  config.headers.Authorization = 'this is tokenId this is tokenId this is tokenId'
-  config.headers.tokenId = '999999999999999999999999999999999999999999999999999995'
+  // config.headers['Content-Type'] = 'application/x-www-form-urlencoded'
   return config
 }, function (error) {
   // 对请求错误做些什么
@@ -31,7 +31,13 @@ axios.interceptors.response.use(function (response) {
   // 对响应错误做点什么
   return Promise.reject(error)
 })
+
+Vue.prototype.$qs = qs
 Vue.prototype.echarts = echarts
+
+// axios.defaults.baseURL = 'http://127.0.0.1:3000'
+// axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+// axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded'
 Vue.prototype.$http = axios
 Vue.use(ElementUI)
 

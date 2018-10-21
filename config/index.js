@@ -11,11 +11,11 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: { // 跨域配置代理
-      '/controller/': {
-        target: 'http://10.10.97.999',
+      '/add/': {
+        target: 'http://127.0.0.1:3000',
         changeOrigin: true,
         pathRewrite: {
-          '^/controller': '/controller'
+          '^/add': '/add'
         }
       },
       '/store/': {
@@ -29,7 +29,7 @@ module.exports = {
 
     // Various Dev Server settings
     host: '0.0.0.0', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 8686, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
@@ -65,7 +65,8 @@ module.exports = {
     // Pathsxian
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './', // Hbuilder 要用这种样式
+    // assetsPublicPath: '/',
 
     /**
      * Source Maps

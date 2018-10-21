@@ -44,6 +44,8 @@
               <li class="branch"><router-link to="/home/git/force"><span>强制推送</span></router-link></li>
               <li class="branch"><router-link to="/home/git/forceOneFile"><span>取消add的内容</span></router-link></li>
               <li class="branch"><router-link to="/home/git/gitignore"><span>.gitignore</span></router-link></li>
+              <li class="branch"><router-link to="/home/git/checkoutOrigin"><span>拉取远程到本地</span></router-link></li>
+              <li class="branch"><router-link to="/home/git/cancal"><span>恢复某个文件成修改前</span></router-link></li>
             </ul>
           </div>
         </li>
@@ -83,6 +85,8 @@
               <li class="branch"><router-link to="/home/Django/virtualenv"><span>虚拟环境</span></router-link></li>
               <li class="branch"><router-link to="/home/Django/init"><span>初始化环境</span></router-link></li>
               <li class="branch"><router-link to="/home/Django/static"><span>css/js/tpl引入</span></router-link></li>
+              <li class="branch"><router-link to="/home/Django/request"><span>四种请求</span></router-link></li>
+              <li class="branch"><router-link to='/home/Django/pgsql'><span>配置pgsql</span></router-link></li>
             </ul>
           </div>
         </li>
@@ -139,6 +143,16 @@
             </ul>
           </div>
         </li>
+        <li class="treeLi" v-show="'web superAdmin'.includes(role)">
+          <router-link to="/home/element-ui">
+            <b @click="jump(9)"><i class="icon-computer"></i><span>element-ui</span></b>
+          </router-link>
+          <div v-if="navBar[9]">
+            <ul>
+              <li class="branch"><router-link to="/home/element-ui/tree"><span>tree控件</span></router-link></li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </nav>
     <main>
@@ -153,7 +167,7 @@ export default {
   name: 'home',
   data () {
     return {
-      navBar: [false, false, false, false, false, false, false, false, false],
+      navBar: [false, false, false, false, false, false, false, false, false, false],
       aside: true,
       navToggle: true,
       background: 'blue',
@@ -162,9 +176,9 @@ export default {
   },
   methods: {
     jump (index) {
-      let arr1 = [false, false, false, false, false, false, false, false, false]
+      let arr1 = [false, false, false, false, false, false, false, false, false, false]
       arr1[index] = true
-      let arr2 = [false, false, false, false, false, false, false, false, false]
+      let arr2 = [false, false, false, false, false, false, false, false, false, false]
       if (this.navBar[index] === true) {
         this.navBar = arr2
       } else {
