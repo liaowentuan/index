@@ -165,7 +165,7 @@
         }
 
       </pre>
-      <img src="../../../static/lst.png" alt="">
+      <img src="../../../static/lst.png" alt="" width="50%">
     </div>
 </template>
 

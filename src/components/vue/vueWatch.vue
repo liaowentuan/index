@@ -23,6 +23,31 @@
             }
         }
       </pre>
+      <h3>computed</h3>
+      <pre>
+        var vm = new Vue({
+            data: { a: 1 },
+            computed: {
+                // 仅读取
+                aDouble: function () {
+                    return this.a * 2
+                },
+            // 读取和设置
+                aPlus: {
+                    get: function () {
+                        return this.a + 1
+                    },
+                    set: function (v) {
+                        this.a = v - 1
+                    }
+                }
+            }
+        })
+        vm.aPlus   // => 2
+        vm.aPlus = 3
+        vm.a       // => 2
+        vm.aDouble // => 4
+      </pre>
     </div>
 </template>
 
